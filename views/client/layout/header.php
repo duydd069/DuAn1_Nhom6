@@ -210,7 +210,7 @@
                                                         <div class="demo-image">
                                                             <img class="lazyload" data-src="public/client/assets/images/demo/home-headphone.jpg" src="public/client/assets/images/demo/home-headphone.jpg" alt="home-headphone">
                                                         </div>
-                                                        <span class="demo-name">Home Headphone</span>
+                                                        <span class="demo-name">Home Headph</span>
                                                     </a>
                                                 </div>
                                                 <div class="demo-item">
