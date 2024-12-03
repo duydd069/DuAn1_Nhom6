@@ -8,12 +8,42 @@ class home{
         $this->conn = connection(); 
     }
 
+    public function getCategories() {
+        $stmt = $this->conn->prepare("SELECT category_id, category_name FROM categories");
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     public function home()
     {
         $stmt = $this->conn->prepare("SELECT * FROM products ORDER BY id LIMIT 6");
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+    public function listProducts()
+    {
+    $sql = "SELECT
+        products.id AS id,
+        products.product_name AS product_name,
+        products.product_price AS product_price,
+        products.discount_price AS discount_price,
+        products.image AS image,
+        products.quantity AS quantity,
+        products.views AS views,
+        products.import_date AS import_date,
+        products.description AS description,
+        categories.id AS category_id,
+        products.status AS status
+    FROM products
+    LEFT JOIN categories ON products.category_id = categories.id";
+
+    $stmt = $this->conn->prepare($sql);
+    $stmt->execute();
+    $listProducts = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    return $listProducts; // Không cần nhóm sản phẩm khi chỉ lấy thông tin sản phẩm
+    }
+
     public function addProduct($id, $product_name, $product_price, $discount_price, $image, $quantity, $views, $import_date, $description, $category_id, $status) {
         // Chuẩn bị câu lệnh SQL để thêm sản phẩm
         $stmt = $this->conn->prepare("

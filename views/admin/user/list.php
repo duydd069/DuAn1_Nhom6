@@ -1,182 +1,11 @@
-<!DOCTYPE html>
-<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
-<!--<![endif]-->
-
-
-<!-- Mirrored from themesflat.co/html/ecomus/admin-ecomus/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Nov 2024 12:32:20 GMT -->
-<head>
-    <!-- Basic Page Needs -->
-    <meta charset="utf-8">
-    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-    <title>Ecomus - Ultimate Admin Dashboard HTML</title>
-
-    <meta name="author" content="themesflat.com">
-
-    <!-- Mobile Specific Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <!-- Theme Style -->
-    <link rel="stylesheet" type="text/css" href="public/admin/assets/css/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="public/admin/assets/css/animation.css">
-    <link rel="stylesheet" type="text/css" href="public/admin/assets/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="public/admin/assets/css/bootstrap-select.min.css">
-    <link rel="stylesheet" type="text/css" href="public/admin/assets/css/styles.css">
-
-
-
-    <!-- Font -->
-    <link rel="stylesheet" href="public/admin/assets/font/fonts.css">
-
-    <!-- Icon -->
-    <link rel="stylesheet" href="public/admin/assets/icon/style.css">
-
-    <!-- Favicon and Touch Icons  -->
-    <link rel="shortcut icon" href="public/admin/assets/images/favicon.png">
-    <link rel="apple-touch-icon-precomposed" href="public/admin/assets/images/favicon.png">
-
-</head>
-
-<body>
-
-    <!-- #wrapper -->
-    <div id="wrapper">
-        <!-- #page -->
-        <div id="page" class="">
-            <!-- layout-wrap -->
-            <div class="layout-wrap">
-                <!-- preload -->
-                
-                <!-- /preload -->
-                <!-- section-menu-left -->
-                <div class="section-menu-left">
-                    <div class="box-logo">
-                        <a href="?ctl=dashboard" id="site-logo-inner">
-                            <img class="" id="logo_header" alt="" src="https://themesflat.co/html/ecomus/images/logo/logo.svg" data-light="../images/logo/logo.svg" data-dark="https://themesflat.co/html/ecomus/images/logo/logo-white.svg" >
-                        </a>
-                        <div class="button-show-hide">
-                            <i class="icon-chevron-left"></i>
-                        </div>
-                    </div>
-                    <div class="section-menu-left-wrap">
-                        <div class="center">
-                            <div class="center-item">
-                                <ul class="">
-                                    <li class="menu-item has-children   ">
-                                        <a href="javascript:void(0);" class="">
-                                        <div class="icon"><i class="icon-file-plus"></i></div>
-                                            <div class="text">Product</div>
-                                        </a>
-                                        <ul class="sub-menu">
-                                            <li class="sub-menu-item">
-                                                <a href="?ctl=listProduct" class="">
-                                                    <div class="text">Product List</div>
-                                                </a>
-                                            </li>
-                                            <li class="sub-menu-item">
-                                                <a href="?ctl=formAddProduct" class="">
-                                                    <div class="text">Add new</div>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item has-children">
-                                        
-                                        
-                                    <li class="menu-item has-children">
-                                        <a href="javascript:void(0);" class="menu-item-button">
-                                            <div class="icon"><i class="icon-layers"></i></div>
-                                            <div class="text">Category</div>
-                                        </a>
-                                        <ul class="sub-menu">
-                                            <li class="sub-menu-item">
-                                                <a href="?ctl=category" class="">
-                                                    <div class="text">Category list</div>
-                                                </a>
-                                            </li>
-                                            <li class="sub-menu-item">
-                                                <a href="?ctl=formAddCategory" class="">
-                                                    <div class="text">New category</div>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="menu-item has-children">
-                                        <a href="javascript:void(0);" class="menu-item-button">
-                                            <div class="icon">
-                                                <svg width="24" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0001 2C8.34322 2 7.00008 3.34315 7.00008 5V5.75H13.0001V5C13.0001 3.34315 11.6569 2 10.0001 2ZM14.5001 5.75V5C14.5001 2.51472 12.4854 0.5 10.0001 0.5C7.51479 0.5 5.50008 2.51472 5.50008 5V5.75H3.51287C2.55332 5.75 1.74862 6.47444 1.64817 7.42872L0.385015 19.4287C0.268481 20.5358 1.13652 21.5 2.24971 21.5H17.7504C18.8636 21.5 19.7317 20.5358 19.6151 19.4287L18.352 7.42872C18.2515 6.47444 17.4468 5.75 16.4873 5.75H14.5001ZM13.0001 7.25H7.00008V8.66146C7.23023 8.86745 7.37508 9.16681 7.37508 9.5C7.37508 10.1213 6.8714 10.625 6.25008 10.625C5.62876 10.625 5.12508 10.1213 5.12508 9.5C5.12508 9.16681 5.26992 8.86745 5.50008 8.66146V7.25H3.51287C3.32096 7.25 3.16002 7.39489 3.13993 7.58574L1.87677 19.5857C1.85347 19.8072 2.02707 20 2.24971 20H17.7504C17.9731 20 18.1467 19.8072 18.1234 19.5857L16.8602 7.58574C16.8401 7.39489 16.6792 7.25 16.4873 7.25H14.5001V8.66146C14.7302 8.86746 14.8751 9.16681 14.8751 9.5C14.8751 10.1213 14.3714 10.625 13.7501 10.625C13.1288 10.625 12.6251 10.1213 12.6251 9.5C12.6251 9.16681 12.7699 8.86745 13.0001 8.66146V7.25Z" fill="#111111"/>
-                                                </svg>
-                                            </div>
-                                            <div class="text">Order</div>
-                                        </a>
-                                        <ul class="sub-menu">
-                                            <li class="sub-menu-item">
-                                                <a href="?ctl=order" class="">
-                                                    <div class="text">Order list</div>
-                                                </a>
-                                            </li>
-                                            <li class="sub-menu-item">
-                                                <a href="?ctl=orderDetail" class="">
-                                                    <div class="text">Order detail</div>
-                                                </a>
-                                            </li>
-                                            
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item has-children">
-                                        <a href="javascript:void(0);" class="menu-item-button">
-                                            <div class="icon"><i class="icon-user"></i></div>
-                                            <div class="text">Users</div>
-                                        </a>
-                                        <ul class="sub-menu">
-                                            <li class="sub-menu-item">
-                                                <a href="?ctl=user" class="">
-                                                    <div class="text">All user</div>
-                                                </a>
-                                            </li>
-                                            <li class="sub-menu-item">
-                                                <a href="?ctl=formAddUser" class="">
-                                                    <div class="text">Add new user</div>
-                                                </a>
-                                            </li>
-                                            
-                                        </ul>
-                                    </li>
-
-                                    <li class="menu-item">
-                                        <a href="?ctl=report" class="">
-                                            <div class="icon"><i class="icon-pie-chart"></i></div>
-                                            <div class="text">Report</div>
-                                        </a>
-                                    </li>
-
-
-                                    <li class="menu-item">
-                                        <a href="?ctl=login" class="">
-                                            <div class="icon">
-                                                <svg width="24" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M8.125 18.6875C8.125 18.903 8.0394 19.1097 7.88702 19.262C7.73465 19.4144 7.52799 19.5 7.3125 19.5H1.625C1.19402 19.5 0.780698 19.3288 0.475951 19.024C0.171205 18.7193 0 18.306 0 17.875V1.625C0 1.19402 0.171205 0.780698 0.475951 0.475951C0.780698 0.171205 1.19402 0 1.625 0H7.3125C7.52799 0 7.73465 0.0856026 7.88702 0.237976C8.0394 0.390349 8.125 0.597012 8.125 0.8125C8.125 1.02799 8.0394 1.23465 7.88702 1.38702C7.73465 1.5394 7.52799 1.625 7.3125 1.625H1.625V17.875H7.3125C7.52799 17.875 7.73465 17.9606 7.88702 18.113C8.0394 18.2653 8.125 18.472 8.125 18.6875ZM19.2623 9.17516L15.1998 5.11266C15.0474 4.9602 14.8406 4.87455 14.625 4.87455C14.4094 4.87455 14.2026 4.9602 14.0502 5.11266C13.8977 5.26511 13.812 5.47189 13.812 5.6875C13.812 5.90311 13.8977 6.10989 14.0502 6.26234L16.7263 8.9375H7.3125C7.09701 8.9375 6.89035 9.0231 6.73798 9.17548C6.5856 9.32785 6.5 9.53451 6.5 9.75C6.5 9.96549 6.5856 10.1722 6.73798 10.3245C6.89035 10.4769 7.09701 10.5625 7.3125 10.5625H16.7263L14.0502 13.2377C13.8977 13.3901 13.812 13.5969 13.812 13.8125C13.812 14.0281 13.8977 14.2349 14.0502 14.3873C14.2026 14.5398 14.4094 14.6255 14.625 14.6255C14.8406 14.6255 15.0474 14.5398 15.1998 14.3873L19.2623 10.3248C19.3379 10.2494 19.3978 10.1598 19.4387 10.0611C19.4796 9.9625 19.5006 9.85678 19.5006 9.75C19.5006 9.64322 19.4796 9.5375 19.4387 9.43886C19.3978 9.34023 19.3379 9.25062 19.2623 9.17516Z" fill="#111111"/>
-                                                </svg>
-                                            </div>
-                                            <div class="text">Log out</div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /section-menu-left -->
-                <!-- section-content-right -->
+<?php
+include 'views/admin/layout/header.php';?>
                 <div class="section-content-right">
                     <!-- header-dashboard -->
                     <div class="header-dashboard">
                         <div class="wrap">
                             <div class="header-left">
-                                <a href="">
+                                <a href="index.html">
                                     <img class="" id="logo_header_mobile" alt="" src="https://themesflat.co/html/ecomus/images/logo/logo.svg" data-light="../images/logo/logo.svg" data-dark="https://themesflat.co/html/ecomus/images/logo/logo-white.svg" >
                                 </a>
                                 <div class="button-show-hide">
@@ -205,7 +34,7 @@
                                                         </div>
                                                         <div class="flex items-center justify-between gap20 flex-grow">
                                                             <div class="name">
-                                                                <a href="../views/admin/product/list.php" class="body-text">Neptune Longsleeve</a>
+                                                                <a href="product-list.html" class="body-text">Neptune Longsleeve</a>
                                                             </div>
                                                         </div>
                                                     </li>
@@ -218,7 +47,7 @@
                                                         </div>
                                                         <div class="flex items-center justify-between gap20 flex-grow">
                                                             <div class="name">
-                                                                <a href="../views/admin/product/list.php" class="body-text">Ribbed Tank Top</a>
+                                                                <a href="product-list.html" class="body-text">Ribbed Tank Top</a>
                                                             </div>
                                                         </div>
                                                     </li>
@@ -231,7 +60,7 @@
                                                         </div>
                                                         <div class="flex items-center justify-between gap20 flex-grow">
                                                             <div class="name">
-                                                                <a href="../views/admin/product/list.php" class="body-text">Ribbed modal T-shirt</a>
+                                                                <a href="product-list.html" class="body-text">Ribbed modal T-shirt</a>
                                                             </div>
                                                         </div>
                                                     </li>
@@ -253,7 +82,7 @@
                                                         </div>
                                                         <div class="flex items-center justify-between gap20 flex-grow">
                                                             <div class="name">
-                                                                <a href="../views/admin/product/list.php" class="body-text">Oversized Motif T-shirt</a>
+                                                                <a href="product-list.html" class="body-text">Oversized Motif T-shirt</a>
                                                             </div>
                                                         </div>
                                                     </li>
@@ -266,7 +95,7 @@
                                                         </div>
                                                         <div class="flex items-center justify-between gap20 flex-grow">
                                                             <div class="name">
-                                                                <a href="../views/admin/product/list.php" class="body-text">V-neck linen T-shirt</a>
+                                                                <a href="product-list.html" class="body-text">V-neck linen T-shirt</a>
                                                             </div>
                                                         </div>
                                                     </li>
@@ -279,7 +108,7 @@
                                                         </div>
                                                         <div class="flex items-center justify-between gap20 flex-grow">
                                                             <div class="name">
-                                                                <a href="../views/admin/product/list.php" class="body-text">Jersey thong body</a>
+                                                                <a href="product-list.html" class="body-text">Jersey thong body</a>
                                                             </div>
                                                         </div>
                                                     </li>
@@ -292,7 +121,7 @@
                                                         </div>
                                                         <div class="flex items-center justify-between gap20 flex-grow">
                                                             <div class="name">
-                                                                <a href="../views/admin/product/list.php" class="body-text">Jersey thong body</a>
+                                                                <a href="product-list.html" class="body-text">Jersey thong body</a>
                                                             </div>
                                                         </div>
                                                     </li>
@@ -305,8 +134,8 @@
                             <div class="header-grid">
                                 <div class="header-item country">
                                     <select class="image-select no-text">
-                                        <option data-thumbnail="public/admin/assets/images/country/1.png">ENG</option>
-                                        <option data-thumbnail="public/admin/assets/images/country/9.png">VIE</option>
+                                        <option data-thumbnail="images/country/1.png">ENG</option>
+                                        <option data-thumbnail="images/country/9.png">VIE</option>
                                     </select>
                                 </div>
                                 <div class="header-item button-dark-light">
@@ -611,3 +440,232 @@
                             </div>
                         </div>
                     </div>
+                    <!-- /header-dashboard -->
+                    <!-- main-content -->
+                    <div class="main-content">
+                        <!-- main-content-wrap -->
+                        <div class="main-content-inner">
+                            <!-- main-content-wrap -->
+                            <div class="main-content-wrap">
+                                <div class="flex items-center flex-wrap justify-between gap20 mb-30">
+                                    <h3>All User</h3>
+                                    <ul class="breadcrumbs flex items-center flex-wrap justify-start gap10">
+                                        <li>
+                                            <a href="index.html"><div class="text-tiny">Dashboard</div></a>
+                                        </li>
+                                        <li>
+                                            <i class="icon-chevron-right"></i>
+                                        </li>
+                                        <li>
+                                            <a href="#"><div class="text-tiny">User</div></a>
+                                        </li>
+                                        <li>
+                                            <i class="icon-chevron-right"></i>
+                                        </li>
+                                        <li>
+                                            <div class="text-tiny">All User</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- all-user -->
+                                <div class="wg-box">
+                                    <div class="flex items-center justify-between gap10 flex-wrap">
+                                        <div class="wg-filter flex-grow">
+                                            <form class="form-search">
+                                                <fieldset class="name">
+                                                    <input type="text" placeholder="Search here..." class="" name="name" tabindex="2" value="" aria-required="true" required="">
+                                                </fieldset>
+                                                <div class="button-submit">
+                                                    <button class="" type="submit"><i class="icon-search"></i></button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <a class="tf-button style-1 w208" href="add-new-user.html"><i class="icon-plus"></i>Add new</a>
+                                    </div>
+                                    <div class="wg-table table-all-user">
+                                        <ul class="table-title flex gap20 mb-14">
+                                            <li>
+                                                <div class="body-title">User</div>
+                                            </li>    
+                                            <li>
+                                                <div class="body-title">Phone</div>
+                                            </li>
+                                            <li>
+                                                <div class="body-title">Email</div>
+                                            </li>
+                                            <li>
+                                                <div class="body-title">Action</div>
+                                            </li>
+                                        </ul>
+                                        <ul class="flex flex-column">
+                                            <li class="wg-product item-row">
+                                                <div class="name flex-grow">
+                                                    <div class="image">
+                                                        <img src="images/products/product-1.jpg" alt="">
+                                                    </div>
+                                                    <div>
+                                                        <div class="title">
+                                                            <a href="#" class="body-title-2">V-neck linen T-shirt</a>
+                                                        </div>
+                                                        <div class="text-tiny">Product name</div>
+                                                    </div>
+                                                </div>
+                                                <div class="body-text">(212) 555-1234</div>
+                                                <div class="body-text">info@fashionshop.com</div>
+                                                <div class="list-icon-function">
+                                                    <div class="item eye">
+                                                        <i class="icon-eye"></i>
+                                                    </div>
+                                                    <div class="item edit">
+                                                        <i class="icon-edit-3"></i>
+                                                    </div>
+                                                    <div class="item trash">
+                                                        <i class="icon-trash-2"></i>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="wg-product item-row">
+                                                <div class="name flex-grow">
+                                                    <div class="image">
+                                                        <img src="images/products/product-2.jpg" alt="">
+                                                    </div>
+                                                    <div>
+                                                        <div class="title">
+                                                            <a href="#" class="body-title-2">Neptune Longsleeve</a>
+                                                        </div>
+                                                        <div class="text-tiny">Product name</div>
+                                                    </div>
+                                                </div>
+                                                <div class="body-text">(212) 555-1234</div>
+                                                <div class="body-text">info@fashionshop.com</div>
+                                                <div class="list-icon-function">
+                                                    <div class="item eye">
+                                                        <i class="icon-eye"></i>
+                                                    </div>
+                                                    <div class="item edit">
+                                                        <i class="icon-edit-3"></i>
+                                                    </div>
+                                                    <div class="item trash">
+                                                        <i class="icon-trash-2"></i>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="wg-product item-row">
+                                                <div class="name flex-grow">
+                                                    <div class="image">
+                                                        <img src="images/products/product-3.jpg" alt="">
+                                                    </div>
+                                                    <div>
+                                                        <div class="title">
+                                                            <a href="#" class="body-title-2">Ribbed Tank Top</a>
+                                                        </div>
+                                                        <div class="text-tiny">Product name</div>
+                                                    </div>
+                                                </div>
+                                                <div class="body-text">(212) 555-1234</div>
+                                                <div class="body-text">info@fashionshop.com</div>
+                                                <div class="list-icon-function">
+                                                    <div class="item eye">
+                                                        <i class="icon-eye"></i>
+                                                    </div>
+                                                    <div class="item edit">
+                                                        <i class="icon-edit-3"></i>
+                                                    </div>
+                                                    <div class="item trash">
+                                                        <i class="icon-trash-2"></i>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="wg-product item-row">
+                                                <div class="name flex-grow">
+                                                    <div class="image">
+                                                        <img src="images/products/product-4.jpg" alt="">
+                                                    </div>
+                                                    <div>
+                                                        <div class="title">
+                                                            <a href="#" class="body-title-2">Oversized Motif T-shirt</a>
+                                                        </div>
+                                                        <div class="text-tiny">Product name</div>
+                                                    </div>
+                                                </div>
+                                                <div class="body-text">(212) 555-1234</div>
+                                                <div class="body-text">info@fashionshop.com</div>
+                                                <div class="list-icon-function">
+                                                    <div class="item eye">
+                                                        <i class="icon-eye"></i>
+                                                    </div>
+                                                    <div class="item edit">
+                                                        <i class="icon-edit-3"></i>
+                                                    </div>
+                                                    <div class="item trash">
+                                                        <i class="icon-trash-2"></i>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="wg-product item-row">
+                                                <div class="name flex-grow">
+                                                    <div class="image">
+                                                        <img src="images/products/product-5.jpg" alt="">
+                                                    </div>
+                                                    <div>
+                                                        <div class="title">
+                                                            <a href="#" class="body-title-2">Jersey thong body</a>
+                                                        </div>
+                                                        <div class="text-tiny">Product name</div>
+                                                    </div>
+                                                </div>
+                                                <div class="body-text">(212) 555-1234</div>
+                                                <div class="body-text">info@fashionshop.com</div>
+                                                <div class="list-icon-function">
+                                                    <div class="item eye">
+                                                        <i class="icon-eye"></i>
+                                                    </div>
+                                                    <div class="item edit">
+                                                        <i class="icon-edit-3"></i>
+                                                    </div>
+                                                    <div class="item trash">
+                                                        <i class="icon-trash-2"></i>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="flex items-center justify-between flex-wrap gap10">
+                                        <div class="text-tiny">Showing 10 entries</div>
+                                        <ul class="wg-pagination">
+                                            <li>
+                                                <a href="#"><i class="icon-chevron-left"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#">1</a>
+                                            </li>
+                                            <li class="active">
+                                                <a href="#">2</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">3</a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="icon-chevron-right"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- /all-user -->
+                            </div>
+                            <!-- /main-content-wrap -->
+                        </div>
+                        <!-- /main-content-wrap -->
+                        <!-- bottom-page -->
+                        <div class="bottom-page">
+                            <div class="body-text">Copyright © 2024 <a href="https://themesflat.co/html/ecomus/index.html">Ecomus</a>. Design by Themesflat All rights reserved</div>
+                        </div>
+                        <!-- /bottom-page -->
+                    </div>
+                    <!-- /main-content -->
+                </div>
+
+<?php
+include 'views/admin/layout/footer.php';
+?>

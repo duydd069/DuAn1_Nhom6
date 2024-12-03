@@ -1,5 +1,6 @@
 <?php 
-include 'views/admin/layout/header.php';?>
+include 'views/admin/layout/header.php';
+?>
 <div class="main-content">
                         <!-- main-content-wrap -->
                         <div class="main-content-inner">
@@ -29,7 +30,7 @@ include 'views/admin/layout/header.php';?>
                                 <div class="wg-box">
                                     <div class="title-box">
                                         <i class="icon-coffee"></i>
-                                        <div class="body-text">Tip search by Product ID: Each product is provided with a unique ID, which you can rely on to find the exact product you need.</div>
+                                        <div class="body-text">Mẹo tìm kiếm theo ID sản phẩm: Mỗi sản phẩm được cung cấp một ID duy nhất mà bạn có thể dựa vào đó để tìm chính xác sản phẩm mình cần.</div>
                                     </div>
                                     <div class="flex items-center justify-between gap10 flex-wrap">
                                         <div class="wg-filter flex-grow">
@@ -42,72 +43,69 @@ include 'views/admin/layout/header.php';?>
                                                 </div>
                                             </form>
                                         </div>
-                                        <a class="tf-button style-1 w208" href="?ctl=showCreateProduct"><i class="icon-plus"></i>Add new</a>
+                                        <a class="tf-button style-1 w208" href="?ctl=formAddProduct"><i class="icon-plus"></i>Add new</a>
                                     </div>
-                                    <table>
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Hình ảnh</th>
-            <th>Tên</th>
-            <th>Danh mục</th>
-            <th>Giá</th>
-            <th>Giảm giá</th>
-            <th>Số lượng</th>
-            <th>Ngày nhập</th>
-            <th>Hành động</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php foreach ($product as $products): ?>
-        <tr>
-            <td>
-                <a href="#"><?= $products['id'] ?></a>
-            </td>
-
-            <td>
-                <img src="<?= htmlspecialchars($products['image']) ?>" class="img-fluid" alt="Hình ảnh sản phẩm" style="width: 100px">
-            </td>
-
-            <td>
-                <a href="#"><?= htmlspecialchars($products['product_name']) ?></a>
-            </td>
-
-            <td>
-                <strong><a href="#"><?= htmlspecialchars($products['category_id']) ?></a></strong>
-            </td>
-
-            <td class="td-price"><?= number_format($products['product_price'], 0, ',', '.') ?> VNĐ</td>
-            
-            <td class="td-price"><?= number_format($products['discount_price'] ?? $products['product_price'], 0, ',', '.') ?> VNĐ</td>
-
-            <td><?= (int)$products['quantity'] ?></td>
-
-            <td><?= htmlspecialchars($products['import_date']) ?></td>
-
-            <td>
-                <ul style="list-style: none; padding: 0; display: flex; gap: 10px;">
-                    <li>
-                        <a href="order-detail.html" title="Xem chi tiết">
-                            <span class="lnr lnr-eye"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)" title="Chỉnh sửa">
-                            <span class="lnr lnr-pencil"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)" title="Xóa">
-                            <i class="far fa-trash-alt theme-color"></i>
-                        </a>
-                    </li>
-                </ul>
-            </td>
-        </tr>
+                                    <div class="wg-table table-product-list">
+    <ul class="table-title flex gap20 mb-14">
+        <li>
+            <div class="body-title">Product</div>
+        </li>    
+        <li>
+            <div class="body-title">Product ID</div>
+        </li>
+        <li>
+            <div class="body-title">Price</div>
+        </li>
+        <li>
+            <div class="body-title">Quantity</div>
+        </li>
+        <li>
+            <div class="body-title">Sale</div>
+        </li>
+        <li>
+            <div class="body-title">Stock</div>
+        </li>
+        <li>
+            <div class="body-title">Start date</div>
+        </li>
+        <li>
+            <div class="body-title">Action</div>
+        </li>
+    </ul>
+    <ul class="flex flex-column">
+        <?php foreach ($products as $product): ?>
+        <li class="wg-product item-row gap20">
+            <div class="name">
+                <div class="image">
+                    <img src="<?= htmlspecialchars($product['image']) ?>" alt="">
+                </div>
+                <div class="title line-clamp-2 mb-0">
+                    <a href="#" class="body-text"><?= htmlspecialchars($product['product_name']) ?></a>
+                </div>
+            </div>
+            <div class="body-text text-main-dark mt-4"><?= htmlspecialchars($product['id']) ?></div>
+            <div class="body-text text-main-dark mt-4">$<?= number_format($product['product_price'], 2) ?></div>
+            <div class="body-text text-main-dark mt-4"><?= (int)$product['quantity'] ?></div>
+            <div class="body-text text-main-dark mt-4"><?= (int)$product['discount_price'] ?></div>
+            <div>
+                <div class="block-available bg-1 fw-7"><?= $product['quantity'] > 0 ? 'In Stock' : 'Out of Stock' ?></div>
+            </div>
+            <div class="body-text text-main-dark mt-4"><?= date('m/d/Y', strtotime($product['import_date'])) ?></div>
+            <div class="list-icon-function">
+                <div class="item eye">
+                    <i class="icon-eye"></i>
+                </div>
+                <div class="item edit">
+                    <i class="icon-edit-3"></i>
+                </div>
+                <div class="item trash">
+                    <i class="icon-trash-2"></i>
+                </div>
+            </div>
+        </li>
         <?php endforeach; ?>
-    </tbody>
-</table>
+    </ul>
+</div>
 
 
                                     <div class="divider"></div>

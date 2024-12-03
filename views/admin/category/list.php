@@ -1,4 +1,4 @@
-<?php include '../views/admin/layout/header.php';?>
+<?php include 'views/admin/layout/header.php';?>
 <div class="main-content">
                         <!-- main-content-wrap -->
                         <div class="main-content-inner">
@@ -48,7 +48,7 @@
                                                 </div>
                                             </form>
                                         </div>
-                                        <a class="tf-button style-1 w208" href="new-category.html"><i class="icon-plus"></i>Add new</a>
+                                        <a class="tf-button style-1 w208" href="?ctl=formAddCategory"><i class="icon-plus"></i>Add new</a>
                                     </div>
                                     <div class="wg-table table-all-category">
                                         <ul class="table-title flex gap20 mb-14">
@@ -119,4 +119,4 @@
                     </div>
                         <!-- main-content-wrap -->
 
-<?php include '../views/admin/layout/footer.php';?>
+<?php include 'views/admin/layout/footer.php';?>

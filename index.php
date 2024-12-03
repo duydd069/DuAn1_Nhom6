@@ -9,6 +9,7 @@
         require_once "./controller/homeController.php";
         require_once "./controller/payController.php";
         require_once "./controller/productController.php";
+        require_once "./controller/adminController.php";
 
         require_once './model/home.php';
         require_once './model/user.php';
@@ -19,7 +20,15 @@
             '',
             'home'                      =>(new HomeController)->home(), 
             'form_login'                =>(new UserController)->form_login(),
-            
+            'dashboard'                 =>(new AdminController)->dashboard(),
+            'formAddProduct'            =>(new AdminController)->formAddProduct(),
+            'category'                  =>(new AdminController)->category(),
+            'formAddCategory'           =>(new AdminController)->formAddCategory(),
+            'order'                     =>(new AdminController)->order(),
+            'formAddOrder'              =>(new AdminController)->formAddOrder(),
+            'user'                      =>(new AdminController)->user(),
+            'formAddUser'               =>(new AdminController)->formAddUser(),
+            'listProduct'               =>(new AdminController)->listProduct(),
             
 
             'blog-detail'               => (new BlogController)->detail(),

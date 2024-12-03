@@ -1,4 +1,4 @@
-<?php include '../views/admin/layout/header.php';?>
+<?php include 'views/admin/layout/header.php';?>
 <div class="main-content">
                         <!-- main-content-wrap -->
                         <div class="main-content-inner">
@@ -74,4 +74,4 @@
                         <!-- /bottom-page -->
                     </div>
                         
-<?php include '../views/admin/layout/footer.php';?>
+<?php include 'views/admin/layout/footer.php';?>
