@@ -134,8 +134,8 @@ include 'views/admin/layout/header.php';?>
                             <div class="header-grid">
                                 <div class="header-item country">
                                     <select class="image-select no-text">
-                                        <option data-thumbnail="images/country/1.png">ENG</option>
-                                        <option data-thumbnail="images/country/9.png">VIE</option>
+                                        <option data-thumbnail="public/admin/assets/images/country/1.png">ENG</option>
+                                        <option data-thumbnail="public/admin/assets/images/country/9.png">VIE</option>
                                     </select>
                                 </div>
                                 <div class="header-item button-dark-light">
@@ -295,7 +295,7 @@ include 'views/admin/layout/header.php';?>
                                                 <ul class="list-apps">
                                                     <li class="item">
                                                         <div class="image">
-                                                            <img src="images/apps/item-1.png" alt="">
+                                                            <img src="public/admin/assets/images/apps/item-1.png" alt="">
                                                         </div>
                                                         <a href="#">
                                                             <div class="text-tiny">Photoshop</div>
@@ -303,7 +303,7 @@ include 'views/admin/layout/header.php';?>
                                                     </li>
                                                     <li class="item">
                                                         <div class="image">
-                                                            <img src="images/apps/item-2.png" alt="">
+                                                            <img src="public/admin/assets/images/apps/item-2.png" alt="">
                                                         </div>
                                                         <a href="#">
                                                             <div class="text-tiny">illustrator</div>
@@ -311,7 +311,7 @@ include 'views/admin/layout/header.php';?>
                                                     </li>
                                                     <li class="item">
                                                         <div class="image">
-                                                            <img src="images/apps/item-3.png" alt="">
+                                                            <img src="public/admin/assets/images/apps/item-3.png" alt="">
                                                         </div>
                                                         <a href="#">
                                                             <div class="text-tiny">Sheets</div>
@@ -319,7 +319,7 @@ include 'views/admin/layout/header.php';?>
                                                     </li>
                                                     <li class="item">
                                                         <div class="image">
-                                                            <img src="images/apps/item-4.png" alt="">
+                                                            <img src="public/admin/assets/images/apps/item-4.png" alt="">
                                                         </div>
                                                         <a href="#">
                                                             <div class="text-tiny">Gmail</div>
@@ -327,7 +327,7 @@ include 'views/admin/layout/header.php';?>
                                                     </li>
                                                     <li class="item">
                                                         <div class="image">
-                                                            <img src="images/apps/item-5.png" alt="">
+                                                            <img src="public/admin/assets/images/apps/item-5.png" alt="">
                                                         </div>
                                                         <a href="#">
                                                             <div class="text-tiny">Messenger</div>
@@ -335,7 +335,7 @@ include 'views/admin/layout/header.php';?>
                                                     </li>
                                                     <li class="item">
                                                         <div class="image">
-                                                            <img src="images/apps/item-6.png" alt="">
+                                                            <img src="public/admin/assets/images/apps/item-6.png" alt="">
                                                         </div>
                                                         <a href="#">
                                                             <div class="text-tiny">Youtube</div>
@@ -343,7 +343,7 @@ include 'views/admin/layout/header.php';?>
                                                     </li>
                                                     <li class="item">
                                                         <div class="image">
-                                                            <img src="images/apps/item-7.png" alt="">
+                                                            <img src="public/admin/assets/images/apps/item-7.png" alt="">
                                                         </div>
                                                         <a href="#">
                                                             <div class="text-tiny">Flaticon</div>
@@ -351,7 +351,7 @@ include 'views/admin/layout/header.php';?>
                                                     </li>
                                                     <li class="item">
                                                         <div class="image">
-                                                            <img src="images/apps/item-8.png" alt="">
+                                                            <img src="public/admin/assets/images/apps/item-8.png" alt="">
                                                         </div>
                                                         <a href="#">
                                                             <div class="text-tiny">Instagram</div>
@@ -359,7 +359,7 @@ include 'views/admin/layout/header.php';?>
                                                     </li>
                                                     <li class="item">
                                                         <div class="image">
-                                                            <img src="images/apps/item-9.png" alt="">
+                                                            <img src="public/admin/assets/images/apps/item-9.png" alt="">
                                                         </div>
                                                         <a href="#">
                                                             <div class="text-tiny">PDF</div>
@@ -485,150 +485,92 @@ include 'views/admin/layout/header.php';?>
                                     <div class="wg-table table-all-user">
                                         <ul class="table-title flex gap20 mb-14">
                                             <li>
-                                                <div class="body-title">User</div>
+                                                <div class="body-title">ID</div>
+                                            </li>
+                                            <li>
+                                                <div class="body-title">Name</div>
                                             </li>    
                                             <li>
-                                                <div class="body-title">Phone</div>
+                                                <div class="body-title">Avatar</div>
+                                            </li>
+                                            <li>
+                                                <div class="body-title">Ngày sinh</div>
                                             </li>
                                             <li>
                                                 <div class="body-title">Email</div>
                                             </li>
                                             <li>
-                                                <div class="body-title">Action</div>
+                                                <div class="body-title">SĐT</div>
+                                            </li>
+                                            <li>
+                                                <div class="body-title">Giới tính</div>
+                                            </li>
+                                            <li>
+                                                <div class="body-title">Địa chỉ</div>
+                                            </li>
+                                            <li>
+                                                <div class="body-title">Mật khẩu</div>
+                                            </li>
+                                            <li>
+                                                <div class="body-title">Vai trò</div>
+                                            </li>
+                                            <li>
+                                                <div class="body-title">Mô tả</div>
+                                            </li>
+                                            <li>
+                                                <div class="body-title">Hành động</div>
                                             </li>
                                         </ul>
                                         <ul class="flex flex-column">
-                                            <li class="wg-product item-row">
-                                                <div class="name flex-grow">
-                                                    <div class="image">
-                                                        <img src="images/products/product-1.jpg" alt="">
-                                                    </div>
-                                                    <div>
-                                                        <div class="title">
-                                                            <a href="#" class="body-title-2">V-neck linen T-shirt</a>
-                                                        </div>
-                                                        <div class="text-tiny">Product name</div>
-                                                    </div>
-                                                </div>
-                                                <div class="body-text">(212) 555-1234</div>
-                                                <div class="body-text">info@fashionshop.com</div>
-                                                <div class="list-icon-function">
-                                                    <div class="item eye">
-                                                        <i class="icon-eye"></i>
-                                                    </div>
-                                                    <div class="item edit">
-                                                        <i class="icon-edit-3"></i>
-                                                    </div>
-                                                    <div class="item trash">
-                                                        <i class="icon-trash-2"></i>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="wg-product item-row">
-                                                <div class="name flex-grow">
-                                                    <div class="image">
-                                                        <img src="images/products/product-2.jpg" alt="">
-                                                    </div>
-                                                    <div>
-                                                        <div class="title">
-                                                            <a href="#" class="body-title-2">Neptune Longsleeve</a>
-                                                        </div>
-                                                        <div class="text-tiny">Product name</div>
-                                                    </div>
-                                                </div>
-                                                <div class="body-text">(212) 555-1234</div>
-                                                <div class="body-text">info@fashionshop.com</div>
-                                                <div class="list-icon-function">
-                                                    <div class="item eye">
-                                                        <i class="icon-eye"></i>
-                                                    </div>
-                                                    <div class="item edit">
-                                                        <i class="icon-edit-3"></i>
-                                                    </div>
-                                                    <div class="item trash">
-                                                        <i class="icon-trash-2"></i>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="wg-product item-row">
-                                                <div class="name flex-grow">
-                                                    <div class="image">
-                                                        <img src="images/products/product-3.jpg" alt="">
-                                                    </div>
-                                                    <div>
-                                                        <div class="title">
-                                                            <a href="#" class="body-title-2">Ribbed Tank Top</a>
-                                                        </div>
-                                                        <div class="text-tiny">Product name</div>
-                                                    </div>
-                                                </div>
-                                                <div class="body-text">(212) 555-1234</div>
-                                                <div class="body-text">info@fashionshop.com</div>
-                                                <div class="list-icon-function">
-                                                    <div class="item eye">
-                                                        <i class="icon-eye"></i>
-                                                    </div>
-                                                    <div class="item edit">
-                                                        <i class="icon-edit-3"></i>
-                                                    </div>
-                                                    <div class="item trash">
-                                                        <i class="icon-trash-2"></i>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="wg-product item-row">
-                                                <div class="name flex-grow">
-                                                    <div class="image">
-                                                        <img src="images/products/product-4.jpg" alt="">
-                                                    </div>
-                                                    <div>
-                                                        <div class="title">
-                                                            <a href="#" class="body-title-2">Oversized Motif T-shirt</a>
-                                                        </div>
-                                                        <div class="text-tiny">Product name</div>
-                                                    </div>
-                                                </div>
-                                                <div class="body-text">(212) 555-1234</div>
-                                                <div class="body-text">info@fashionshop.com</div>
-                                                <div class="list-icon-function">
-                                                    <div class="item eye">
-                                                        <i class="icon-eye"></i>
-                                                    </div>
-                                                    <div class="item edit">
-                                                        <i class="icon-edit-3"></i>
-                                                    </div>
-                                                    <div class="item trash">
-                                                        <i class="icon-trash-2"></i>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="wg-product item-row">
-                                                <div class="name flex-grow">
-                                                    <div class="image">
-                                                        <img src="images/products/product-5.jpg" alt="">
-                                                    </div>
-                                                    <div>
-                                                        <div class="title">
-                                                            <a href="#" class="body-title-2">Jersey thong body</a>
-                                                        </div>
-                                                        <div class="text-tiny">Product name</div>
-                                                    </div>
-                                                </div>
-                                                <div class="body-text">(212) 555-1234</div>
-                                                <div class="body-text">info@fashionshop.com</div>
-                                                <div class="list-icon-function">
-                                                    <div class="item eye">
-                                                        <i class="icon-eye"></i>
-                                                    </div>
-                                                    <div class="item edit">
-                                                        <i class="icon-edit-3"></i>
-                                                    </div>
-                                                    <div class="item trash">
-                                                        <i class="icon-trash-2"></i>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
+    <?php foreach ($users as $user): ?>
+    <li class="wg-product item-row gap20">
+        <div class="body-text text-main-dark mt-4"><?= ($user['id']) ?></div>
+        <div class="body-text text-main-dark mt-4"><?= ($user['name']) ?></div>
+        <div class="body-text text-main-dark mt-4">
+            <img src="<?= ($user['user_image']) ?>" alt="User Image" class="user-image">
+        </div>
+        <div class="body-text text-main-dark mt-4"><?= date('m/d/Y', strtotime($user['birth'])) ?></div>
+        <div class="body-text text-main-dark mt-4"><?= ($user['email']) ?></div>
+        <div class="body-text text-main-dark mt-4"><?= ($user['phone']) ?></div>
+        <div class="body-text text-main-dark mt-4"><?= ($user['sex'] == 'M' ? 'Trai' : 'Gái') ?></div>
+        <div class="body-text text-main-dark mt-4"><?= ($user['address']) ?></div>
+        <div class="body-text text-main-dark mt-4"><?= ($user['password']) ?></div>
+        <div class="body-text text-main-dark mt-4">
+            <?php 
+            // Replace this with actual role text from a role table
+            switch($user['role_id']) {
+                case 1: echo 'Admin'; break;
+                case 3: echo 'Editor'; break;
+                case 2: echo 'User'; break;
+                default: echo 'Unknown'; 
+            }
+            ?>
+        </div>
+        <div class="block-available bg-1 fw-7">
+            <?php 
+            // Replace this with actual status text from a status table
+            switch($user['status']) {
+                case 1: echo 'Active'; break;
+                case 2: echo 'Die'; break;
+                default: echo 'Unknown'; 
+            }
+            ?>
+        </div>
+        <div class="list-icon-function">
+            <div class="item eye" title="View User Details">
+                <i class="icon-eye"></i>
+            </div>
+            <div class="item edit" title="Edit User">
+                <i class="icon-edit-3"></i>
+            </div>
+            <div class="item trash" title="Delete User">
+                <i class="icon-trash-2"></i>
+            </div>
+        </div>
+    </li>
+    <?php endforeach; ?>
+</ul>
+
                                     </div>
                                     <div class="divider"></div>
                                     <div class="flex items-center justify-between flex-wrap gap10">

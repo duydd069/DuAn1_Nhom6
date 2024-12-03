@@ -7,6 +7,7 @@ class home{
         // liên kết database.
         $this->conn = connection(); 
     }
+    
 
     public function getCategories() {
         $sql = "SELECT categories.id AS id,
@@ -17,6 +18,47 @@ class home{
         $listCategories = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
         return $listCategories;
+    }
+
+    public function getOrders() {
+        $sql = "SELECT orders.id AS id,
+        orders.order_code AS order_code,
+        orders.account_id AS account_id,
+        orders.recipient_name AS recipient_name,
+        orders.recipient_email AS recipient_email,
+        orders.recipient_phone AS recipient_phone,
+        orders.recipient_address AS recipient_address,
+        orders.order_date AS order_date,
+        orders.total_amount AS total_amount,
+        orders.payment_method_id AS payment_method_id,
+        orders.note AS note,
+        orders.status_id AS status_id
+        FROM orders";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+        $listOrders = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+        return $listOrders;
+    }
+
+    public function getUsers() {
+        $sql = "SELECT accounts.id AS id,
+        accounts.name AS name,
+        accounts.user_image AS user_image,
+        accounts.birth AS birth,
+        accounts.email AS email,
+        accounts.phone AS phone,
+        accounts.sex AS sex,
+        accounts.address AS address,
+        accounts.password AS password,
+        accounts.role_id AS role_id,
+        accounts.status AS status
+        FROM accounts";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+        $listUsers = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+        return $listUsers;
     }
  
     public function listProducts()

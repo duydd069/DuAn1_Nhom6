@@ -45,7 +45,7 @@ include 'views/admin/layout/header.php';
                                         </div>
                                         <a class="tf-button style-1 w208" href="?ctl=formAddProduct"><i class="icon-plus"></i>Add new</a>
                                     </div>
-                                    <div class="wg-table table-product-list">
+<div class="wg-table table-product-list">
     <ul class="table-title flex gap20 mb-14">
         <li>
             <div class="body-title">Product</div>

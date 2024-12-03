@@ -15,6 +15,8 @@
         public function formAddProduct() {
         include "views/admin/product/create.php";
         }
+
+        
         
 
         /// Category
@@ -35,7 +37,8 @@
         /// Order
 
         public function order(){
-            return view("admin/order/list");
+            $orders = (new home)->getOrders();
+            include 'views/admin/order/list.php';
         }
         public function formAddOrder(){
             include "views/admin/order/create.php";
@@ -44,7 +47,8 @@
         /// User
 
         public function user(){
-            return view("admin/user/list");
+            $users = (new home)->getUsers();
+            include 'views/admin/user/list.php';
         }
         public function formAddUser(){
             include "views/admin/user/create.php";

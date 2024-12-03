@@ -327,7 +327,7 @@
                                             <li>
                                                 <div class="noti-item w-full wg-user active">
                                                     <div class="image">
-                                                        <img src="images/customers/customer-1.jpg" alt="">
+                                                        <img src="public/admin/assets/images/customers/customer-1.jpg" alt="">
                                                     </div>
                                                     <div class="flex-grow">
                                                         <div class="flex items-center justify-between">
@@ -341,7 +341,7 @@
                                             <li>
                                                 <div class="noti-item w-full wg-user active">
                                                     <div class="image">
-                                                        <img src="images/customers/customer-2.jpg" alt="">
+                                                        <img src="public/admin/assets/images/customers/customer-2.jpg" alt="">
                                                     </div>
                                                     <div class="flex-grow">
                                                         <div class="flex items-center justify-between">
@@ -355,7 +355,7 @@
                                             <li>
                                                 <div class="noti-item w-full wg-user active">
                                                     <div class="image">
-                                                        <img src="images/customers/customer-3.jpg" alt="">
+                                                        <img src="public/admin/assets/images/customers/customer-3.jpg" alt="">
                                                     </div>
                                                     <div class="flex-grow">
                                                         <div class="flex items-center justify-between">
@@ -369,7 +369,7 @@
                                             <li>
                                                 <div class="noti-item w-full wg-user active">
                                                     <div class="image">
-                                                        <img src="images/customers/customer-1.jpg" alt="">
+                                                        <img src="public/admin/assets/images/customers/customer-1.jpg" alt="">
                                                     </div>
                                                     <div class="flex-grow">
                                                         <div class="flex items-center justify-between">
@@ -466,7 +466,7 @@
                                                 <ul class="list-apps">
                                                     <li class="item">
                                                         <div class="image">
-                                                            <img src="images/apps/item-1.png" alt="">
+                                                            <img src="public/admin/assets/images/apps/item-1.png" alt="">
                                                         </div>
                                                         <a href="#">
                                                             <div class="text-tiny">Photoshop</div>
@@ -474,7 +474,7 @@
                                                     </li>
                                                     <li class="item">
                                                         <div class="image">
-                                                            <img src="images/apps/item-2.png" alt="">
+                                                            <img src="public/admin/assets/images/apps/item-2.png" alt="">
                                                         </div>
                                                         <a href="#">
                                                             <div class="text-tiny">illustrator</div>
@@ -482,7 +482,7 @@
                                                     </li>
                                                     <li class="item">
                                                         <div class="image">
-                                                            <img src="images/apps/item-3.png" alt="">
+                                                            <img src="public/admin/assets/images/apps/item-3.png" alt="">
                                                         </div>
                                                         <a href="#">
                                                             <div class="text-tiny">Sheets</div>
@@ -490,7 +490,7 @@
                                                     </li>
                                                     <li class="item">
                                                         <div class="image">
-                                                            <img src="images/apps/item-4.png" alt="">
+                                                            <img src="public/admin/assets/images/apps/item-4.png" alt="">
                                                         </div>
                                                         <a href="#">
                                                             <div class="text-tiny">Gmail</div>
@@ -498,7 +498,7 @@
                                                     </li>
                                                     <li class="item">
                                                         <div class="image">
-                                                            <img src="images/apps/item-5.png" alt="">
+                                                            <img src="public/admin/assets/images/apps/item-5.png" alt="">
                                                         </div>
                                                         <a href="#">
                                                             <div class="text-tiny">Messenger</div>
@@ -506,7 +506,7 @@
                                                     </li>
                                                     <li class="item">
                                                         <div class="image">
-                                                            <img src="images/apps/item-6.png" alt="">
+                                                            <img src="public/admin/assets/images/apps/item-6.png" alt="">
                                                         </div>
                                                         <a href="#">
                                                             <div class="text-tiny">Youtube</div>
@@ -514,7 +514,7 @@
                                                     </li>
                                                     <li class="item">
                                                         <div class="image">
-                                                            <img src="images/apps/item-7.png" alt="">
+                                                            <img src="public/admin/assets/images/apps/item-7.png" alt="">
                                                         </div>
                                                         <a href="#">
                                                             <div class="text-tiny">Flaticon</div>
@@ -522,7 +522,7 @@
                                                     </li>
                                                     <li class="item">
                                                         <div class="image">
-                                                            <img src="images/apps/item-8.png" alt="">
+                                                            <img src="public/admin/assets/images/apps/item-8.png" alt="">
                                                         </div>
                                                         <a href="#">
                                                             <div class="text-tiny">Instagram</div>
@@ -530,7 +530,7 @@
                                                     </li>
                                                     <li class="item">
                                                         <div class="image">
-                                                            <img src="images/apps/item-9.png" alt="">
+                                                            <img src="public/admin/assets/images/apps/item-9.png" alt="">
                                                         </div>
                                                         <a href="#">
                                                             <div class="text-tiny">PDF</div>
@@ -547,7 +547,7 @@
                                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">
                                             <span class="header-user wg-user">
                                                 <span class="image">
-                                                    <img src="images/avatar/user-1.png" alt="">
+                                                    <img src="public/admin/assets/images/avatar/user-1.png" alt="">
                                                 </span>
                                                 <span class="flex flex-column">
                                                     <span class="body-text text-main-dark">Kristin Watson</span>

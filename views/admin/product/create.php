@@ -79,7 +79,7 @@
                     <div class="cols-lg gap22">
                         <fieldset class="sku">
                             <div class="body-title mb-10">SKU</div>
-                            <input class="input-black" type="text" placeholder="Enter SKU" name="sku" required>
+                            <input class="input-black" type="text" placeholder="Enter SKU" name="sku">
                         </fieldset>
                         <fieldset class="stock">
                             <div class="body-title mb-10">Số lượng <span class="tf-color-1">*</span></div>

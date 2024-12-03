@@ -135,8 +135,8 @@ include 'views/admin/layout/header.php';
                             <div class="header-grid">
                                 <div class="header-item country">
                                     <select class="image-select no-text">
-                                        <option data-thumbnail="images/country/1.png">ENG</option>
-                                        <option data-thumbnail="images/country/9.png">VIE</option>
+                                        <option data-thumbnail="public/admin/assets/images/country/1.png">ENG</option>
+                                        <option data-thumbnail="public/admin/assets/images/country/9.png">VIE</option>
                                     </select>
                                 </div>
                                 <div class="header-item button-dark-light">
@@ -296,7 +296,7 @@ include 'views/admin/layout/header.php';
                                                 <ul class="list-apps">
                                                     <li class="item">
                                                         <div class="image">
-                                                            <img src="images/apps/item-1.png" alt="">
+                                                            <img src="public/admin/assets/images/apps/item-1.png" alt="">
                                                         </div>
                                                         <a href="#">
                                                             <div class="text-tiny">Photoshop</div>
@@ -304,7 +304,7 @@ include 'views/admin/layout/header.php';
                                                     </li>
                                                     <li class="item">
                                                         <div class="image">
-                                                            <img src="images/apps/item-2.png" alt="">
+                                                            <img src="public/admin/assets/images/apps/item-2.png" alt="">
                                                         </div>
                                                         <a href="#">
                                                             <div class="text-tiny">illustrator</div>
@@ -312,7 +312,7 @@ include 'views/admin/layout/header.php';
                                                     </li>
                                                     <li class="item">
                                                         <div class="image">
-                                                            <img src="images/apps/item-3.png" alt="">
+                                                            <img src="public/admin/assets/images/apps/item-3.png" alt="">
                                                         </div>
                                                         <a href="#">
                                                             <div class="text-tiny">Sheets</div>
@@ -320,7 +320,7 @@ include 'views/admin/layout/header.php';
                                                     </li>
                                                     <li class="item">
                                                         <div class="image">
-                                                            <img src="images/apps/item-4.png" alt="">
+                                                            <img src="public/admin/assets/images/apps/item-4.png" alt="">
                                                         </div>
                                                         <a href="#">
                                                             <div class="text-tiny">Gmail</div>
@@ -328,7 +328,7 @@ include 'views/admin/layout/header.php';
                                                     </li>
                                                     <li class="item">
                                                         <div class="image">
-                                                            <img src="images/apps/item-5.png" alt="">
+                                                            <img src="public/admin/assets/images/apps/item-5.png" alt="">
                                                         </div>
                                                         <a href="#">
                                                             <div class="text-tiny">Messenger</div>
@@ -336,7 +336,7 @@ include 'views/admin/layout/header.php';
                                                     </li>
                                                     <li class="item">
                                                         <div class="image">
-                                                            <img src="images/apps/item-6.png" alt="">
+                                                            <img src="public/admin/assets/images/apps/item-6.png" alt="">
                                                         </div>
                                                         <a href="#">
                                                             <div class="text-tiny">Youtube</div>
@@ -344,7 +344,7 @@ include 'views/admin/layout/header.php';
                                                     </li>
                                                     <li class="item">
                                                         <div class="image">
-                                                            <img src="images/apps/item-7.png" alt="">
+                                                            <img src="public/admin/assets/images/apps/item-7.png" alt="">
                                                         </div>
                                                         <a href="#">
                                                             <div class="text-tiny">Flaticon</div>
@@ -352,7 +352,7 @@ include 'views/admin/layout/header.php';
                                                     </li>
                                                     <li class="item">
                                                         <div class="image">
-                                                            <img src="images/apps/item-8.png" alt="">
+                                                            <img src="public/admin/assets/images/apps/item-8.png" alt="">
                                                         </div>
                                                         <a href="#">
                                                             <div class="text-tiny">Instagram</div>
@@ -360,7 +360,7 @@ include 'views/admin/layout/header.php';
                                                     </li>
                                                     <li class="item">
                                                         <div class="image">
-                                                            <img src="images/apps/item-9.png" alt="">
+                                                            <img src="public/admin/assets/images/apps/item-9.png" alt="">
                                                         </div>
                                                         <a href="#">
                                                             <div class="text-tiny">PDF</div>
@@ -473,17 +473,8 @@ include 'views/admin/layout/header.php';
                                     <div class="flex items-center justify-between gap10 flex-wrap">
                                         <div class="wg-filter flex-grow">
                                             <div class="show">
-                                                <div class="text-tiny">Showing</div>
-                                                <div class="select">
-                                                    <select class="">
-                                                        <option>10</option>
-                                                        <option>20</option>
-                                                        <option>30</option>
-                                                    </select>
-                                                </div>
-                                                <div class="text-tiny">entries</div>
-                                            </div>
-                                            <form class="form-search">
+
+<form class="form-search">
                                                 <fieldset class="name">
                                                     <input type="text" placeholder="Search here..." class="" name="name" tabindex="2" value="" aria-required="true" required="">
                                                 </fieldset>
@@ -491,150 +482,71 @@ include 'views/admin/layout/header.php';
                                                     <button class="" type="submit"><i class="icon-search"></i></button>
                                                 </div>
                                             </form>
+                                            </div>
+                                            
                                         </div>
-                                        <a class="tf-button style-1 w208" href="new-category.html"><i class="icon-plus"></i>Add new</a>
+
                                     </div>
-                                    <div class="wg-table table-all-category">
-                                        <ul class="table-title flex gap20 mb-14">
-                                            <li>
-                                                <div class="body-title">Category</div>
-                                            </li>    
-                                            <li>
-                                                <div class="body-title">Quantity</div>
-                                            </li>
-                                            <li>
-                                                <div class="body-title">Sale</div>
-                                            </li>
-                                            <li>
-                                                <div class="body-title">Start date</div>
-                                            </li>
-                                            <li>
-                                                <div class="body-title">Action</div>
-                                            </li>
-                                        </ul>
-                                        <ul class="flex flex-column">
-                                            <li class="wg-product item-row gap20">
-                                                <div class="name">
-                                                    <div class="image">
-                                                        <img src="images/products/product-1.jpg" alt="">
-                                                    </div>
-                                                    <div class="title line-clamp-2 mb-0">
-                                                        <a href="#" class="body-text">Oversized Motif T-shirt</a>
-                                                    </div>
-                                                </div>
-                                                <div class="body-text text-main-dark mt-4">1,638</div>
-                                                <div class="body-text text-main-dark mt-4">20</div>
-                                                <div class="body-text text-main-dark mt-4">20 Nov 2023</div>
-                                                <div class="list-icon-function">
-                                                    <div class="item eye">
-                                                        <i class="icon-eye"></i>
-                                                    </div>
-                                                    <div class="item edit">
-                                                        <i class="icon-edit-3"></i>
-                                                    </div>
-                                                    <div class="item trash">
-                                                        <i class="icon-trash-2"></i>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="wg-product item-row gap20">
-                                                <div class="name">
-                                                    <div class="image">
-                                                        <img src="images/products/product-2.jpg" alt="">
-                                                    </div>
-                                                    <div class="title line-clamp-2 mb-0">
-                                                        <a href="#" class="body-text">Oversized Motif T-shirt</a>
-                                                    </div>
-                                                </div>
-                                                <div class="body-text text-main-dark mt-4">1,638</div>
-                                                <div class="body-text text-main-dark mt-4">20</div>
-                                                <div class="body-text text-main-dark mt-4">20 Nov 2023</div>
-                                                <div class="list-icon-function">
-                                                    <div class="item eye">
-                                                        <i class="icon-eye"></i>
-                                                    </div>
-                                                    <div class="item edit">
-                                                        <i class="icon-edit-3"></i>
-                                                    </div>
-                                                    <div class="item trash">
-                                                        <i class="icon-trash-2"></i>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="wg-product item-row gap20">
-                                                <div class="name">
-                                                    <div class="image">
-                                                        <img src="images/products/product-3.jpg" alt="">
-                                                    </div>
-                                                    <div class="title line-clamp-2 mb-0">
-                                                        <a href="#" class="body-text">Oversized Motif T-shirt</a>
-                                                    </div>
-                                                </div>
-                                                <div class="body-text text-main-dark mt-4">1,638</div>
-                                                <div class="body-text text-main-dark mt-4">20</div>
-                                                <div class="body-text text-main-dark mt-4">20 Nov 2023</div>
-                                                <div class="list-icon-function">
-                                                    <div class="item eye">
-                                                        <i class="icon-eye"></i>
-                                                    </div>
-                                                    <div class="item edit">
-                                                        <i class="icon-edit-3"></i>
-                                                    </div>
-                                                    <div class="item trash">
-                                                        <i class="icon-trash-2"></i>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="wg-product item-row gap20">
-                                                <div class="name">
-                                                    <div class="image">
-                                                        <img src="images/products/product-4.jpg" alt="">
-                                                    </div>
-                                                    <div class="title line-clamp-2 mb-0">
-                                                        <a href="#" class="body-text">Oversized Motif T-shirt</a>
-                                                    </div>
-                                                </div>
-                                                <div class="body-text text-main-dark mt-4">1,638</div>
-                                                <div class="body-text text-main-dark mt-4">20</div>
-                                                <div class="body-text text-main-dark mt-4">20 Nov 2023</div>
-                                                <div class="list-icon-function">
-                                                    <div class="item eye">
-                                                        <i class="icon-eye"></i>
-                                                    </div>
-                                                    <div class="item edit">
-                                                        <i class="icon-edit-3"></i>
-                                                    </div>
-                                                    <div class="item trash">
-                                                        <i class="icon-trash-2"></i>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="wg-product item-row gap20">
-                                                <div class="name">
-                                                    <div class="image">
-                                                        <img src="images/products/product-5.jpg" alt="">
-                                                    </div>
-                                                    <div class="title line-clamp-2 mb-0">
-                                                        <a href="#" class="body-text">Oversized Motif T-shirt</a>
-                                                    </div>
-                                                </div>
-                                                <div class="body-text text-main-dark mt-4">1,638</div>
-                                                <div class="body-text text-main-dark mt-4">20</div>
-                                                <div class="body-text text-main-dark mt-4">20 Nov 2023</div>
-                                                <div class="list-icon-function">
-                                                    <div class="item eye">
-                                                        <i class="icon-eye"></i>
-                                                    </div>
-                                                    <div class="item edit">
-                                                        <i class="icon-edit-3"></i>
-                                                    </div>
-                                                    <div class="item trash">
-                                                        <i class="icon-trash-2"></i>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
+<div class="wg-table table-product-list">
+    <ul class="table-title flex gap20 mb-14">
+        <li><div class="body-title">Order ID</div></li>    
+        <li><div class="body-title">Order Code</div></li>
+        <li><div class="body-title">Customer</div></li>
+        <li><div class="body-title">Total Amount</div></li>
+        <li><div class="body-title">Payment Method</div></li>
+        <li><div class="body-title">Order Date</div></li>
+        <li><div class="body-title">Status</div></li>
+        <li><div class="body-title">Action</div></li>
+    </ul>
+    <ul class="flex flex-column">
+        <?php foreach ($orders as $order): ?>
+        <li class="wg-product item-row gap20">
+            <div class="body-text text-main-dark mt-4"><?= htmlspecialchars($order['id']) ?></div>
+            <div class="body-text text-main-dark mt-4"><?= htmlspecialchars($order['order_code']) ?></div>
+            <div class="customer-info">
+                <div class="body-text"><?= htmlspecialchars($order['recipient_name']) ?></div>
+                <div class="text-tiny text-surface-2"><?= htmlspecialchars($order['recipient_email']) ?></div>
+            </div>
+            <div class="body-text text-main-dark mt-4"><?= number_format($order['total_amount'], 2) ?></div>
+            <div class="body-text text-main-dark mt-4"><?php 
+                    // You might want to replace this with actual status text from a status table
+                    switch($order['payment_method_id']) {
+                        case 1: echo 'Cash'; break;
+                        case 2: echo 'Banking'; break;
+
+                        default: echo ''; 
+                    }
+                    ?></div>
+            <div class="body-text text-main-dark mt-4"><?= date('m/d/Y', strtotime($order['order_date'])) ?></div>
+            <div>
+                <div class="block-available bg-1 fw-7">
+                    <?php 
+                    // You might want to replace this with actual status text from a status table
+                    switch($order['status_id']) {
+                        case 1: echo 'Pending'; break;
+                        case 2: echo 'Processing'; break;
+                        case 3: echo 'Completed'; break;
+                        case 4: echo 'Cancelled'; break;
+                        default: echo 'Error'; 
+                    }
+                    ?>
+                </div>
+            </div>
+            <div class="list-icon-function">
+                <div class="item eye" title="View Order Details">
+                    <i class="icon-eye"></i>
+                </div>
+                <div class="item edit" title="Edit Order">
+                    <i class="icon-edit-3"></i>
+                </div>
+                <div class="item trash" title="Delete Order">
+                    <i class="icon-trash-2"></i>
+                </div>
+            </div>
+        </li>
+        <?php endforeach; ?>
+    </ul>
+</div>
                                     <div class="divider"></div>
                                     <div class="flex items-center justify-between flex-wrap gap10">
                                         <div class="text-tiny">Showing 10 entries</div>
