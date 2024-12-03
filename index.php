@@ -11,7 +11,7 @@
         require_once "./controller/productController.php";
         require_once "./controller/adminController.php";
 
-        require_once './model/home.php';
+        require_once './model/AdminModel.php';
         require_once './model/user.php';
 
         $ctl = $_GET['ctl'] ?? "";

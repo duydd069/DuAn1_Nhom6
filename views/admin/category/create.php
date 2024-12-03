@@ -31,21 +31,7 @@
                                             <div class="body-title">Product name <span class="tf-color-1">*</span></div>
                                             <input class="flex-grow" type="text" placeholder="Category name" name="text" tabindex="0" value="" aria-required="true" required="">
                                         </fieldset>
-                                        <fieldset>
-                                            <div class="body-title">Upload images <span class="tf-color-1">*</span></div>
-                                            <div class="upload-image flex-grow">
-                                                <div class="item up-load">
-                                                    <label class="uploadfile h250" for="myFile">
-                                                        <span class="icon">
-                                                            <i class="icon-upload-cloud"></i>
-                                                        </span>
-                                                        <span class="body-text">Drop your images here or select <span class="tf-color">click to browse</span></span>
-                                                        <img id="myFile-input" src="#" alt="">
-                                                        <input type="file" id="myFile" name="filename">
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </fieldset>
+
                                         <fieldset class="category">
                                             <div class="body-title">Select category icon</div>
                                             <div class="select flex-grow">

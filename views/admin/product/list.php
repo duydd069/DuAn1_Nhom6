@@ -87,9 +87,11 @@ include 'views/admin/layout/header.php';
             <div class="body-text text-main-dark mt-4">$<?= number_format($product['product_price'], 2) ?></div>
             <div class="body-text text-main-dark mt-4"><?= (int)$product['quantity'] ?></div>
             <div class="body-text text-main-dark mt-4"><?= (int)$product['discount_price'] ?></div>
+            
             <div>
                 <div class="block-available bg-1 fw-7"><?= $product['quantity'] > 0 ? 'In Stock' : 'Out of Stock' ?></div>
             </div>
+
             <div class="body-text text-main-dark mt-4"><?= date('m/d/Y', strtotime($product['import_date'])) ?></div>
             <div class="list-icon-function">
                 <div class="item eye">
