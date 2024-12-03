@@ -19,6 +19,43 @@ class home{
     
         return $listCategories;
     }
+    
+    public static function deleteById($id) {
+        $db = Database::getInstance();
+        $stmt = $db->prepare("DELETE FROM products WHERE id = :id");
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+    }
+
+    public static function getById($id) {
+        $db = Database::getInstance();
+        $stmt = $db->prepare("SELECT * FROM products WHERE id = :id");
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public static function updateById($id, $data) {
+        $db = Database::getInstance();
+        $stmt = $db->prepare("
+            UPDATE products
+            SET product_name = :product_name,
+                product_price = :product_price,
+                quantity = :quantity,
+                discount_price = :discount_price,
+                import_date = :import_date,
+                image = :image
+            WHERE id = :id
+        ");
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->bindParam(':product_name', $data['product_name'], PDO::PARAM_STR);
+        $stmt->bindParam(':product_price', $data['product_price'], PDO::PARAM_STR);
+        $stmt->bindParam(':quantity', $data['quantity'], PDO::PARAM_INT);
+        $stmt->bindParam(':discount_price', $data['discount_price'], PDO::PARAM_STR);
+        $stmt->bindParam(':import_date', $data['import_date'], PDO::PARAM_STR);
+        $stmt->bindParam(':image', $data['image'], PDO::PARAM_STR);
+        $stmt->execute();
+    }
 
     public function getOrders() {
         $sql = "SELECT orders.id AS id,

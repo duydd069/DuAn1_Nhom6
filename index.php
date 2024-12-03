@@ -18,7 +18,7 @@
         match($ctl)
         {
             '',
-            'home'                      =>(new HomeController)->home(), 
+            'home'                      =>(new HomeController)->home(),
             'form_login'                =>(new UserController)->form_login(),
             'dashboard'                 =>(new AdminController)->dashboard(),
             'formAddProduct'            =>(new AdminController)->formAddProduct(),

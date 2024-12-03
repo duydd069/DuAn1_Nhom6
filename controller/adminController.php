@@ -15,6 +15,37 @@
         public function formAddProduct() {
         include "views/admin/product/create.php";
         }
+        public function deleteProduct() {
+            if (isset($_GET['id'])) {
+                $id = (int)$_GET['id'];
+                ProductModel::deleteById($id);
+                header("Location: ?ctl=productList");
+            }
+        }
+    
+        public function formEditProduct() {
+            if (isset($_GET['id'])) {
+                $id = (int)$_GET['id'];
+                $product = ProductModel::getById($id);
+                include 'views/admin/product/formEditProduct.php';
+            }
+        }
+    
+        public function updateProduct() {
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                $id = (int)$_POST['id'];
+                $data = [
+                    'product_name' => $_POST['product_name'],
+                    'product_price' => $_POST['product_price'],
+                    'quantity' => $_POST['quantity'],
+                    'discount_price' => $_POST['discount_price'],
+                    'import_date' => $_POST['import_date'],
+                    'image' => $_POST['image']
+                ];
+                ProductModel::updateById($id, $data);
+                header("Location: ?ctl=productList");
+            }
+        }
 
         
         
