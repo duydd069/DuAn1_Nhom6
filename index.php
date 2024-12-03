@@ -14,7 +14,7 @@
         require_once './model/AdminModel.php';
         require_once './model/user.php';
 
-        $ctl = $_GET['ctl'] ?? "";
+        $ctl = $_GET['ctl'] ?? "listProduct";
         match($ctl)
         {
             '',
@@ -22,14 +22,19 @@
             'form_login'                =>(new UserController)->form_login(),
             'dashboard'                 =>(new AdminController)->dashboard(),
             'formAddProduct'            =>(new AdminController)->formAddProduct(),
+            'addProduct'                =>(new AdminController)->addProduct(),
             'category'                  =>(new AdminController)->category(),
             'formAddCategory'           =>(new AdminController)->formAddCategory(),
+            'addCategory'               =>(new AdminController)->addCategory(),
             'order'                     =>(new AdminController)->order(),
             'formAddOrder'              =>(new AdminController)->formAddOrder(),
             'user'                      =>(new AdminController)->user(),
             'formAddUser'               =>(new AdminController)->formAddUser(),
             'listProduct'               =>(new AdminController)->listProduct(),
-            
+            'deleteProduct'             =>(new AdminController)->deleteProduct(),
+            'formEditProduct'           =>(new AdminController)->formEditProduct(),
+            'updateProduct'             =>(new AdminController)->updateProduct(),
+            'deleteCategory'            =>(new AdminController)->deleteCategory(),
 
             'blog-detail'               => (new BlogController)->detail(),
             'blog-grid'                 => (new BlogController)->grid(),

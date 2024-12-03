@@ -19,25 +19,50 @@ class home{
     
         return $listCategories;
     }
-    
-    public static function deleteById($id) {
-        $db = Database::getInstance();
-        $stmt = $db->prepare("DELETE FROM products WHERE id = :id");
+
+    public function addCategory($data) {
+        $query = "INSERT INTO categories (category, description) VALUES (:category_name, :description)";
+        $stmt = $this->conn->prepare($query);
+        
+        // Liên kết các tham số
+        $stmt->bindParam(':category_name', $data['category_name']);
+        $stmt->bindParam(':description', $data['description']);
+        
+        // Thực thi câu lệnh
+        return $stmt->execute();
+    }
+
+    public function deleteCategoryById($id) {
+        $stmt = $this->conn->prepare("DELETE FROM categories WHERE id = :id");
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
     }
+    
+    public function deleteById($id) {
+        // Xóa bình luận liên quan đến sản phẩm
+        $stmt = $this->conn->prepare("DELETE FROM comments WHERE product_id = :id");
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+    
+        // Xóa sản phẩm
+        $stmt = $this->conn->prepare("DELETE FROM products WHERE id = :id");
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+    }
+    
+    
 
-    public static function getById($id) {
-        $db = Database::getInstance();
-        $stmt = $db->prepare("SELECT * FROM products WHERE id = :id");
+    public function getById($id) {
+        $sql = "SELECT * FROM products WHERE id = :id";
+        $stmt = $this->conn->prepare($sql);
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+    
 
-    public static function updateById($id, $data) {
-        $db = Database::getInstance();
-        $stmt = $db->prepare("
+    public function updateById($id, $data) {
+        $sql = "
             UPDATE products
             SET product_name = :product_name,
                 product_price = :product_price,
@@ -46,7 +71,8 @@ class home{
                 import_date = :import_date,
                 image = :image
             WHERE id = :id
-        ");
+        ";
+        $stmt = $this->conn->prepare($sql);
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->bindParam(':product_name', $data['product_name'], PDO::PARAM_STR);
         $stmt->bindParam(':product_price', $data['product_price'], PDO::PARAM_STR);
@@ -56,6 +82,7 @@ class home{
         $stmt->bindParam(':image', $data['image'], PDO::PARAM_STR);
         $stmt->execute();
     }
+    
 
     public function getOrders() {
         $sql = "SELECT orders.id AS id,
@@ -149,5 +176,48 @@ class home{
     //         return false;
     //     }
     // }
+    public function addProduct($data) {
+        // Kiểm tra và xử lý giá trị import_date
+        if (empty($data['import_date'])) {
+            // Nếu không có giá trị, gán ngày hiện tại (hoặc giá trị mặc định khác)
+            $data['import_date'] = date('Y-m-d H:i:s');  // Chuyển về định dạng ngày giờ chuẩn
+        }
+    
+        // Câu lệnh SQL để thêm sản phẩm mới
+        $query = "INSERT INTO products (product_name, product_price, quantity, discount_price, import_date, image, category_id, status, views, description)
+                  VALUES (:product_name, :product_price, :quantity, :discount_price, :import_date, :image, :category_id, :status, :views, :description)";
+    
+        $stmt = $this->conn->prepare($query);
+    
+        // Bind các tham số với giá trị từ mảng $data
+        $stmt->bindParam(':product_name', $data['product_name']);
+        $stmt->bindParam(':product_price', $data['product_price']);
+        $stmt->bindParam(':quantity', $data['quantity']);
+        
+        // Kiểm tra xem discount_price có giá trị hay không, nếu không gán NULL
+        if ($data['discount_price'] === null) {
+            $stmt->bindValue(':discount_price', null, PDO::PARAM_NULL);
+        } else {
+            $stmt->bindParam(':discount_price', $data['discount_price']);
+        }
+    
+        // Bind các tham số còn lại
+        $stmt->bindParam(':import_date', $data['import_date']);
+        $stmt->bindParam(':image', $data['image']);
+        $stmt->bindParam(':category_id', $data['category_id']);
+        $stmt->bindParam(':status', $data['status']);
+        $stmt->bindParam(':views', $data['views']);
+        $stmt->bindParam(':description', $data['description']);
+    
+        // Thực thi câu lệnh
+        if ($stmt->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    
+    
     
 }

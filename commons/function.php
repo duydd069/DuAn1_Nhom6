@@ -32,7 +32,7 @@ function dd($data)
 function upload_file($file)
 {
     if ($file['size'] > 0) {
-        $anh = "images/" . $file['name'];
+        $anh = "public/client/assets/images/" . $file['name'];
         move_uploaded_file($file['tmp_name'], $anh);
         return $anh;
     }

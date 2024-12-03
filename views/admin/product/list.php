@@ -98,9 +98,6 @@ include 'views/admin/layout/header.php';
 
               <div class="body-text text-main-dark mt-4"><?= date('m/d/Y', strtotime($product['import_date'])) ?></div>
               <div class="list-icon-function">
-                <div class="item eye">
-                    <i class="icon-eye"></i>
-                </div>
                 <div class="item edit">
                     <a href="?ctl=formEditProduct&id=<?= htmlspecialchars($product['id']) ?>">
                     <i class="icon-edit-3"></i>

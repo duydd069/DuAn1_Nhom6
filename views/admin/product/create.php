@@ -22,22 +22,26 @@
                     </li>
                 </ul>
             </div>
-            <form class="form-add-product" method="POST" enctype="multipart/form-data">
+            <form class="form-add-product" method="POST" action="?ctl=addProduct" enctype="multipart/form-data">
                 <div class="wg-box mb-30">
                     <fieldset>
                         <div class="body-title mb-10">Upload images</div>
                         <div class="upload-image mb-16">
-                            <div class="up-load">
-                                <label class="uploadfile" for="myFile">
-                                    <span class="icon">
-                                        <i class="icon-upload-cloud"></i>
-                                    </span>
-                                    <div class="text-tiny">Drop your images here or select <span class="text-secondary">click to browse</span></div>
-                                    <input type="file" id="myFile" name="product_images[]" multiple>
-                                    <img src="#" id="myFile-input" alt="">
-                                </label>
-                            </div>
-                        </div>
+    <div class="up-load">
+        <label class="uploadfile" for="myFile">
+            <span class="icon">
+                <i class="icon-upload-cloud"></i>
+            </span>
+            <div class="text-tiny">Drop your images here or select <span class="text-secondary">click to browse</span></div>
+            <input type="file" id="myFile" name="product_images" onchange="previewImage(this)" accept="image/*">
+        </label>
+    </div>
+    <!-- Vùng xem trước ảnh -->
+    <div id="preview-container" style="margin-top: 10px;">
+        <img id="preview-image" src="#" alt="Preview Image" style="max-width: 100%; display: none;" />
+    </div>
+</div>
+
                     </fieldset>
                 </div>
                 <div class="wg-box mb-30">
@@ -49,8 +53,8 @@
                     <fieldset class="category">
                         <div class="body-title mb-10">Category <span class="tf-color-1">*</span></div>
                         <?php
-                        // Giả sử bạn đã lấy danh sách danh mục từ model
-                        $categories = (new home)->getCategories(); // Lấy danh sách danh mục
+                        $homeModel = new home();
+                        $categories = $homeModel->getCategories(); // Lấy danh sách danh mục
                         if (!empty($categories)): ?>
                         <select name="category_id" class="black" required>
                             <option value="">Choose category</option>
@@ -60,34 +64,36 @@
                                 </option>
                             <?php endforeach; ?>
                         </select>
+                        <?php else: ?>
+                            <p class="text-tiny text-surface-2">No categories available.</p>
                         <?php endif; ?>
                     </fieldset>
                     <div class="cols-lg gap22">
                         <fieldset class="price">
                             <div class="body-title mb-10">Price <span class="tf-color-1">*</span></div>
-                            <input class="input-black" type="number" placeholder="Price" name="price" required>
+                            <input class="input-black" type="number" placeholder="Price" name="product_price" required>
                         </fieldset>
                         <fieldset class="sale-price">
                             <div class="body-title mb-10">Sale Price</div>
-                            <input class="input-black" type="number" placeholder="Sale Price" name="discount_price">
+                            <input class="input-black" type="number" placeholder="Sale Price" name="discount_price" value="0">
                         </fieldset>
                         <fieldset class="schedule">
                             <div class="body-title mb-10">Schedule</div>
-                            <input class="input-black" type="date" name="schedule_date">
+                            <input class="input-black" type="date" name="import_date">
                         </fieldset>
                     </div>
                     <div class="cols-lg gap22">
                         <fieldset class="sku">
                             <div class="body-title mb-10">SKU</div>
-                            <input class="input-black" type="text" placeholder="Enter SKU" name="sku">
+                            <input class="input-black" type="text" placeholder="Enter status" name="status" value="0">
                         </fieldset>
                         <fieldset class="stock">
                             <div class="body-title mb-10">Số lượng <span class="tf-color-1">*</span></div>
                             <input class="input-black" type="number" placeholder="Enter Stock" name="quantity" required>
                         </fieldset>
-                        <fieldset class="tags">
-                            <div class="body-title mb-10">Tags</div>
-                            <input class="input-black" type="text" placeholder="Enter a tag" name="tags">
+                        <fieldset class="views">
+                            <div class="body-title mb-10">Views</div>
+                            <input class="input-black" type="text" placeholder="Enter a tag" name="views">
                         </fieldset>
                     </div>
                     <fieldset class="description">
@@ -107,7 +113,23 @@
         <div class="body-text">Copyright © 2024 <a href="https://themesflat.co/html/ecomus/index.html">Ecomus</a>. Design by Themesflat All rights reserved</div>
     </div>
 </div>
-<style>
-    
-</style>
+
+    <script>
+function previewImage(input) {
+    const previewImage = document.getElementById('preview-image');
+    const file = input.files[0]; // Lấy file đầu tiên
+    if (file) {
+        const reader = new FileReader(); // Tạo đối tượng đọc file
+        reader.onload = function(e) {
+            previewImage.src = e.target.result; // Hiển thị ảnh
+            previewImage.style.display = 'block'; // Hiện ảnh
+        };
+        reader.readAsDataURL(file); // Đọc file dưới dạng URL
+    } else {
+        previewImage.src = '#';
+        previewImage.style.display = 'none'; // Ẩn ảnh nếu không có file
+    }
+}
+</script>
+
 <?php include 'views/admin/layout/footer.php'; ?>

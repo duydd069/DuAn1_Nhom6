@@ -26,27 +26,22 @@
                                 </div>
                                 <!-- new-category -->
                                 <div class="wg-box">
-                                    <form class="form-new-product form-style-1" >
-                                        <fieldset class="name">
-                                            <div class="body-title">Product name <span class="tf-color-1">*</span></div>
-                                            <input class="flex-grow" type="text" placeholder="Category name" name="text" tabindex="0" value="" aria-required="true" required="">
-                                        </fieldset>
+                                <form class="form-new-product form-style-1" method="POST" action="?ctl=addCategory">
+    <fieldset class="name">
+        <div class="body-title">Category name <span class="tf-color-1">*</span></div>
+        <input class="flex-grow" type="text" placeholder="Category name" name="category_name" tabindex="0" value="" aria-required="true" required="">
+    </fieldset>
 
-                                        <fieldset class="category">
-                                            <div class="body-title">Select category icon</div>
-                                            <div class="select flex-grow">
-                                                <select class="">
-                                                    <option>Select icon</option>
-                                                    <option>icon 1</option>
-                                                    <option>icon 2</option>
-                                                </select>
-                                            </div>
-                                        </fieldset>
-                                        <div class="bot">
-                                            <div></div>
-                                            <button class="tf-button w208" type="submit">Save</button>
-                                        </div>
-                                    </form>
+    <fieldset class="description">
+        <div class="body-title">Mô tả</div>
+        <input class="flex-grow" type="text" placeholder="Description" name="description" tabindex="0" value="" aria-required="true" >
+    </fieldset>
+    <div class="bot">
+        <div></div>
+        <button class="tf-button w208" type="submit">Save</button>
+    </div>
+</form>
+
                                 </div>
                                 <!-- /new-category -->
                             </div>
