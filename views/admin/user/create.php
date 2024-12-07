@@ -10,13 +10,13 @@ include 'views/admin/layout/header.php';
                                     <h3>Add New User</h3>
                                     <ul class="breadcrumbs flex items-center flex-wrap justify-start gap10">
                                         <li>
-                                            <a href="index.html"><div class="text-tiny">Dashboard</div></a>
+                                            <a href="?ctl=dashboard"><div class="text-tiny">Dashboard</div></a>
                                         </li>
                                         <li>
                                             <i class="icon-chevron-right"></i>
                                         </li>
                                         <li>
-                                            <a href="#"><div class="text-tiny">User</div></a>
+                                            <a href="?ctl=user"><div class="text-tiny">User</div></a>
                                         </li>
                                         <li>
                                             <i class="icon-chevron-right"></i>
@@ -27,7 +27,7 @@ include 'views/admin/layout/header.php';
                                     </ul>
                                 </div>
                                 <!-- add-new-user -->
-                                <form class="form-add-new-user form-style-2" method="POST" enctype="multipart/form-data">
+                                <form class="form-add-new-user form-style-2" action="?ctl=addUser" method="POST" enctype="multipart/form-data">
     <div class="wg-box">
         <div class="left">
             <h5 class="mb-4">User Account</h5>
@@ -144,3 +144,33 @@ include 'views/admin/layout/header.php';
 <?php
 include 'views/admin/layout/footer.php';
 ?>
+public function addProduct() {
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                // Xử lý ảnh
+                $imagePath = "";
+                if (isset($_FILES['product_images']) && $_FILES['product_images']['size'] > 0) {
+                    $imagePath = $this->upload_file($_FILES['product_images']);
+                }
+        
+                // Lấy dữ liệu từ form
+                $data = [
+                    'product_name' => $_POST['product_name'],
+                    'product_price' => $_POST['product_price'],
+                    'quantity' => $_POST['quantity'],
+                    'discount_price' => $_POST['discount_price'] !== '' ? $_POST['discount_price'] : null,
+                    'import_date' => $_POST['schedule_date'] ?? null,
+                    'image' => $imagePath,
+                    'category_id' => $_POST['category_id'],
+                    'status' => $_POST['status'],
+                    'views' => $_POST['views'],
+                    'description' => $_POST['description'],
+                ];
+        
+                // Gọi model để thêm sản phẩm
+                $homeModel = new home();
+                $homeModel->addProduct($data);
+        
+                // Chuyển hướng sau khi thêm
+                header("Location: ?ctl=listProduct");
+            }
+        }

@@ -76,17 +76,17 @@
                                         <div class="body-text"><?= htmlspecialchars($category['id']) ?></div>
                                     </div>
                                     <div class="body-text text-main-dark mt-4"><?= htmlspecialchars($category['category_name']) ?></div>
-                                    <div class="body-text text-main-dark mt-4">Description here</div> <!-- Nếu có mô tả -->
+                                    <div class="body-text text-main-dark mt-4"><?= htmlspecialchars($category['description']) ?></div> <!-- Nếu có mô tả -->
                                     <div class="list-icon-function">
-                                    <div class="item edit">
-                                        <a class="item edit">
-                                            <i class="icon-edit-3"></i>
-                                        </a>
-                                    </div>
-                                    <div class="item">
-                                        <a href="?ctl=deleteCategory&id=<?= htmlspecialchars($category['id']) ?>" onclick="return confirm('Are you sure you want to delete this category?');">
-                                        <i class="icon-trash-2"></i>
-                                        </a>
+                                        <div class="item edit">
+                                            <a href="?ctl=formEditCategory&id=<?= htmlspecialchars($category['id']) ?>">
+                                                <i class="icon-edit-3"></i>
+                                            </a>
+                                        </div>
+                                        <div class="item">
+                                            <a href="?ctl=deleteCategory&id=<?= htmlspecialchars($category['id']) ?>" onclick="return confirm('Are you sure you want to delete this category?');">
+                                                <i class="icon-trash-2"></i>
+                                            </a>
                                         </div>
                                     </div>
                                 </li>

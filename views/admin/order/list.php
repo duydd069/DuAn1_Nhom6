@@ -533,14 +533,15 @@ include 'views/admin/layout/header.php';
                 </div>
             </div>
             <div class="list-icon-function">
-                <div class="item eye" title="View Order Details">
-                    <i class="icon-eye"></i>
+            <div class="item edit">
+                    <a href="?ctl=formEditOrder&id=<?= htmlspecialchars($order['id']) ?>">
+                        <i class="icon-edit-3"></i>
+                    </a>
                 </div>
-                <div class="item edit" title="Edit Order">
-                    <i class="icon-edit-3"></i>
-                </div>
-                <div class="item trash" title="Delete Order">
-                    <i class="icon-trash-2"></i>
+                <div class="item trash">
+                    <a href="?ctl=deleteOrder&id=<?= htmlspecialchars($order['id']) ?>" onclick="return confirm('Are you sure you want to delete this order?');">
+                        <i class="icon-trash-2"></i>
+                    </a>
                 </div>
             </div>
         </li>

@@ -14,7 +14,7 @@
         require_once './model/AdminModel.php';
         require_once './model/user.php';
 
-        $ctl = $_GET['ctl'] ?? "listProduct";
+        $ctl = $_GET['ctl'] ?? "report";
         match($ctl)
         {
             '',
@@ -26,15 +26,26 @@
             'category'                  =>(new AdminController)->category(),
             'formAddCategory'           =>(new AdminController)->formAddCategory(),
             'addCategory'               =>(new AdminController)->addCategory(),
+            'formEditCategory'          =>(new AdminController)->formEditCategory(),
+            'updateCategory'            =>(new AdminController)->updateCategory(),
             'order'                     =>(new AdminController)->order(),
             'formAddOrder'              =>(new AdminController)->formAddOrder(),
+            'formEditOrder'             =>(new AdminController)->formEditOrder(),
+            'addOrder'                  =>(new AdminController)->addOrder(),
+            'updateOrder'               =>(new AdminController)->updateOrder(),
+            'deleteOrder'               =>(new AdminController)->deleteOrder(),
             'user'                      =>(new AdminController)->user(),
             'formAddUser'               =>(new AdminController)->formAddUser(),
+            'addUser'                   =>(new AdminController)->addUser(),
+            'formEditUser'              =>(new AdminController)->formEditUser(),
+            'updateUser'                =>(new AdminController)->updateUser(),
             'listProduct'               =>(new AdminController)->listProduct(),
+            'deleteUser'                =>(new AdminController)->deleteUser(),
             'deleteProduct'             =>(new AdminController)->deleteProduct(),
             'formEditProduct'           =>(new AdminController)->formEditProduct(),
             'updateProduct'             =>(new AdminController)->updateProduct(),
             'deleteCategory'            =>(new AdminController)->deleteCategory(),
+            'report'                    =>(new AdminController)->report(),
 
             'blog-detail'               => (new BlogController)->detail(),
             'blog-grid'                 => (new BlogController)->grid(),

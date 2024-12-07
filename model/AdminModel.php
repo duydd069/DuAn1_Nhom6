@@ -12,6 +12,7 @@ class home{
     public function getCategories() {
         $sql = "SELECT categories.id AS id,
         categories.category AS category_name 
+        ,categories.description AS description
         FROM categories";
         $stmt = $this->conn->prepare($sql);
         $stmt->execute();
@@ -32,8 +33,38 @@ class home{
         return $stmt->execute();
     }
 
+    public function addUser($data) {
+        $query = "INSERT INTO accounts (name, user_image, birth, email, phone, sex, address, password, role_id, status) VALUES (:name, :user_image, :birth, :email, :phone, :sex, :address, :password, :role_id, :status)";
+        $stmt = $this->conn->prepare($query);
+        
+        // Liên kết các tham số
+        $stmt->bindParam(':name', $data['name']);
+        $stmt->bindParam(':user_image', $data['user_image']);
+        $stmt->bindParam(':birth', $data['birth']);
+        $stmt->bindParam(':email', $data['email']);
+        $stmt->bindParam(':phone', $data['phone']);
+        $stmt->bindParam(':sex', $data['sex']);
+        $stmt->bindParam(':address', $data['address']);
+        $stmt->bindParam(':password', $data['password']);
+        $stmt->bindParam(':role_id', $data['role_id']);
+        $stmt->bindParam(':status', $data['status']);
+        
+        // Thực thi câu lệnh
+        return $stmt->execute();
+    }
+
     public function deleteCategoryById($id) {
         $stmt = $this->conn->prepare("DELETE FROM categories WHERE id = :id");
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+    }
+    public function deleteUserById($id) {
+        $stmt = $this->conn->prepare("DELETE FROM accounts WHERE id = :id");
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+    }
+    public function deleteOrderById($id) {
+        $stmt = $this->conn->prepare("DELETE FROM orders WHERE id = :id");
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
     }
@@ -43,6 +74,8 @@ class home{
         $stmt = $this->conn->prepare("DELETE FROM comments WHERE product_id = :id");
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
+
+        
     
         // Xóa sản phẩm
         $stmt = $this->conn->prepare("DELETE FROM products WHERE id = :id");
@@ -54,6 +87,30 @@ class home{
 
     public function getById($id) {
         $sql = "SELECT * FROM products WHERE id = :id";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function getCategoryById($id) {
+        $sql = "SELECT * FROM categories WHERE id = :id";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+    
+    public function getOrderById($id) {
+        $sql = "SELECT * FROM orders WHERE id = :id";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+    
+    public function getUserById($id) {
+        $sql = "SELECT * FROM accounts WHERE id = :id";
         $stmt = $this->conn->prepare($sql);
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
@@ -83,6 +140,81 @@ class home{
         $stmt->execute();
     }
     
+    public function updateCategoryById($id, $data) {
+        $sql = "
+            UPDATE categories
+            SET category = :category,
+                description = :description
+            WHERE id = :id
+        ";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->bindParam(':category', $data['category'], PDO::PARAM_STR);
+        $stmt->bindParam(':description', $data['description'], PDO::PARAM_STR);
+        $stmt->execute();
+    }
+    
+    public function updateOrderById($id, $data) {
+        $sql = "
+            UPDATE orders
+            SET 
+                account_id = :account_id,
+                recipient_name = :recipient_name,
+                recipient_email = :recipient_email,
+                recipient_phone = :recipient_phone,
+                recipient_address = :recipient_address,
+                order_date = :order_date,
+                total_amount = :total_amount,
+                payment_method_id = :payment_method_id,
+                note = :note,
+                status_id = :status_id
+            WHERE id = :id
+        ";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->bindParam(':account_id', $data['account_id'], PDO::PARAM_INT);
+        $stmt->bindParam(':recipient_name', $data['recipient_name'], PDO::PARAM_STR);
+        $stmt->bindParam(':recipient_email', $data['recipient_email'], PDO::PARAM_STR);
+        $stmt->bindParam(':recipient_phone', $data['recipient_phone'], PDO::PARAM_STR);
+        $stmt->bindParam(':recipient_address', $data['recipient_address'], PDO::PARAM_STR);
+        $stmt->bindParam(':order_date', $data['order_date'], PDO::PARAM_STR);
+        $stmt->bindParam(':total_amount', $data['total_amount'], PDO::PARAM_STR);
+        $stmt->bindParam(':payment_method_id', $data['payment_method_id'], PDO::PARAM_INT);
+        $stmt->bindParam(':note', $data['note'], PDO::PARAM_STR);
+        $stmt->bindParam(':status_id', $data['status_id'], PDO::PARAM_INT);
+        $stmt->execute();
+    }
+    
+    public function updateUserById($id, $data) {
+        $sql = "
+            UPDATE accounts
+            SET 
+                name = :name,
+                user_image = :user_image,
+                birth = :birth,
+                email = :email,
+                phone = :phone,
+                sex = :sex,
+                address = :address,
+                password = :password,
+                role_id = :role_id,
+                status = :status
+            WHERE id = :id
+        ";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->bindParam(':name', $data['name'], PDO::PARAM_STR);
+        $stmt->bindParam(':user_image', $data['user_image'], PDO::PARAM_STR);
+        $stmt->bindParam(':birth', $data['birth'], PDO::PARAM_STR);
+        $stmt->bindParam(':email', $data['email'], PDO::PARAM_STR);
+        $stmt->bindParam(':phone', $data['phone'], PDO::PARAM_STR);
+        $stmt->bindParam(':sex', $data['sex'], PDO::PARAM_INT);
+        $stmt->bindParam(':address', $data['address'], PDO::PARAM_STR);
+        $stmt->bindParam(':password', $data['password'], PDO::PARAM_STR);
+        $stmt->bindParam(':role_id', $data['role_id'], PDO::PARAM_INT);
+        $stmt->bindParam(':status', $data['status'], PDO::PARAM_INT);
+        $stmt->execute();
+    }
 
     public function getOrders() {
         $sql = "SELECT orders.id AS id,

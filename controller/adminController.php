@@ -102,7 +102,7 @@
             }
         }
         
-        /// Category
+        /////////////////////////////////////////// Category
 
         public function listCategory() {
             $categories = (new home)->getCategories();
@@ -120,13 +120,13 @@
         public function addCategory() {
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // Lấy dữ liệu từ form
-                $category_name = $_POST['category_name'];
+                $category = $_POST['category_name'];
                 $description = $_POST['description'];
                 
                 // Kiểm tra dữ liệu đầu vào
-                if (!empty($category_name)) {
+                if (!empty($category)) {
                     $data = [
-                        'category_name' => $category_name,
+                        'category_name' => $category,
                         'description' => $description
                     ];
         
@@ -160,10 +160,31 @@
             }
         }
 
+        public function formEditCategory() {
+            if (isset($_GET['id'])) {
+                $id = (int)$_GET['id'];
+                $homeModel = new home(); 
+                $category = $homeModel->getCategoryById($id);
+                include 'views/admin/category/formEditCategory.php';
+            }
+        }
+
+        public function updateCategory() {
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                $id = (int)$_POST['id'];
+                $data = [
+                    'category' => $_POST['category'],
+                    'description' => $_POST['description']
+                ];
         
+                $homeModel = new home();
+                $homeModel->updateCategoryById($id, $data);
+                header("Location: ?ctl=category"); // Điều hướng sau khi cập nhật
+            }
+        }
         
 
-        /// Order
+        ///////////////////////////////////// Order
 
         public function order(){
             $orders = (new home)->getOrders();
@@ -173,7 +194,48 @@
             include "views/admin/order/create.php";
         }
 
-        /// User
+        public function formEditOrder() {
+            if (isset($_GET['id'])) {
+                $id = (int)$_GET['id'];
+                $homeModel = new home(); 
+                $order = $homeModel->getOrderById($id);
+                include 'views/admin/order/formEditOrder.php';
+            }
+        }
+        
+        public function updateOrder() {
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                $id = (int)$_POST['id'];
+                $data = [
+                    'account_id' => $_POST['account_id'],
+                    'recipient_name' => $_POST['recipient_name'],
+                    'recipient_email' => $_POST['recipient_email'],
+                    'recipient_phone' => $_POST['recipient_phone'],
+                    'recipient_address' => $_POST['recipient_address'],
+                    'order_date' => $_POST['order_date'],
+                    'total_amount' => $_POST['total_amount'],
+                    'payment_method_id' => $_POST['payment_method_id'],
+                    'note' => $_POST['note'],
+                    'status_id' => $_POST['status_id']
+                ];
+        
+                $homeModel = new home();
+                $homeModel->updateOrderById($id, $data);
+                header("Location: ?ctl=order"); // Điều hướng sau khi cập nhật
+            }
+        }
+        
+
+        public function deleteOrder() {
+            if (isset($_GET['id'])) {
+                $id = (int)$_GET['id'];
+                $homeModel = new home(); // Tạo instance
+                $homeModel->deleteOrderById($id); // Gọi qua instance
+                header("Location: ?ctl=order");
+            }
+        }
+
+        ///////////////////////////////////// User
 
         public function user(){
             $users = (new home)->getUsers();
@@ -183,4 +245,80 @@
             include "views/admin/user/create.php";
         }
 
+
+        public function addUser() {
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                $imagePath = "";
+                if (isset($_FILES['user_image']) && $_FILES['user_image']['size'] > 0) {
+                    $imagePath = $this->upload_file($_FILES['user_image']);
+                }
+
+                $data = [
+                    'name' => $_POST['name'],
+                    'user_image' => $imagePath,
+                    'birth' => $_POST['birth'],
+                    'email' => $_POST['email'],
+                    'phone' => $_POST['phone'],
+                    'sex' => $_POST['sex'],
+                    'address' => $_POST['address'],
+                    'password' => $_POST['password'],
+                    'role_id' => $role_id,
+                    'status' => $status
+                ];
+        
+                // Gọi model để thêm category
+                $homeModel = new home(); // Tạo instance của home model
+                $homeModel->addUser($data); // Thêm category thông qua phương thức addCategory của model
+        
+                // Chuyển hướng về danh sách category sau khi thêm thành công
+                header('Location: ?ctl=user'); 
+                } 
+            }
+        
+
+        public function formEditUser() {
+            if (isset($_GET['id'])) {
+                $id = (int)$_GET['id'];
+                $homeModel = new home(); 
+                $user = $homeModel->getUserById($id); // Cần thêm phương thức getUserById() vào model
+                include 'views/admin/user/formEditUser.php';
+            }
+        }
+        
+        public function updateUser() {
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                $id = (int)$_POST['id'];
+                $data = [
+                    'name' => $_POST['name'],
+                    'user_image' => $_POST['user_image'],
+                    'birth' => $_POST['birth'],
+                    'email' => $_POST['email'],
+                    'phone' => $_POST['phone'],
+                    'sex' => $_POST['sex'],
+                    'address' => $_POST['address'],
+                    'password' => $_POST['password'],
+                    'role_id' => $_POST['role_id'],
+                    'status' => $_POST['status']
+                ];
+        
+                $homeModel = new home();
+                $homeModel->updateUserById($id, $data);
+                header("Location: ?ctl=user"); // Điều hướng sau khi cập nhật
+            }
+        }
+
+        public function deleteUser() {
+            if (isset($_GET['id'])) {
+                $id = (int)$_GET['id'];
+                $homeModel = new home(); // Tạo instance
+                $homeModel->deleteUserById($id); // Gọi qua instance
+                header("Location: ?ctl=user");
+            }
+        }
+
+        ///////////////////////////////////// Report
+
+        public function report(){
+            include "views/admin/report/report.php";
+        }
     }

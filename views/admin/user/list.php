@@ -480,7 +480,7 @@ include 'views/admin/layout/header.php';?>
                                                 </div>
                                             </form>
                                         </div>
-                                        <a class="tf-button style-1 w208" href="add-new-user.html"><i class="icon-plus"></i>Add new</a>
+                                        <a class="tf-button style-1 w208" href="?ctl=formAddUser"><i class="icon-plus"></i>Add new</a>
                                     </div>
                                     <div class="wg-table table-all-user">
                                         <ul class="table-title flex gap20 mb-14">
@@ -525,14 +525,14 @@ include 'views/admin/layout/header.php';?>
     <?php foreach ($users as $user): ?>
     <li class="wg-product item-row gap20">
         <div class="body-text text-main-dark mt-4"><?= ($user['id']) ?></div>
-        <div class="body-text text-main-dark mt-4"><?= ($user['name']) ?></div>
+        <div style="max-width: 50px" class="body-text text-main-dark mt-4"><?= ($user['name']) ?></div>
         <div class="body-text text-main-dark mt-4">
-            <img src="<?= ($user['user_image']) ?>" alt="User Image" class="user-image">
+            <img style="width: 50px; height: 50px ; border-radius: 50%;" src="<?= ($user['user_image']) ?>" alt="User Image" class="user-image">
         </div>
         <div class="body-text text-main-dark mt-4"><?= date('m/d/Y', strtotime($user['birth'])) ?></div>
         <div class="body-text text-main-dark mt-4"><?= ($user['email']) ?></div>
         <div class="body-text text-main-dark mt-4"><?= ($user['phone']) ?></div>
-        <div class="body-text text-main-dark mt-4"><?= ($user['sex'] == 'M' ? 'Trai' : 'Gái') ?></div>
+        <div class="body-text text-main-dark mt-4"><?= ($user['sex'] == 'M' ? 'Nữ' : 'Nam') ?></div>
         <div class="body-text text-main-dark mt-4"><?= ($user['address']) ?></div>
         <div class="body-text text-main-dark mt-4"><?= ($user['password']) ?></div>
         <div class="body-text text-main-dark mt-4">
@@ -557,14 +557,15 @@ include 'views/admin/layout/header.php';?>
             ?>
         </div>
         <div class="list-icon-function">
-            <div class="item eye" title="View User Details">
-                <i class="icon-eye"></i>
-            </div>
-            <div class="item edit" title="Edit User">
-                <i class="icon-edit-3"></i>
+            <div class="item edit">
+                    <a href="?ctl=formEditUser&id=<?= htmlspecialchars($user['id']) ?>">
+                    <i class="icon-edit-3"></i>
+                </a>
             </div>
             <div class="item trash" title="Delete User">
-                <i class="icon-trash-2"></i>
+                <a href="?ctl=deleteUser&id=<?= htmlspecialchars($user['id']) ?>" onclick="return confirm('Are you sure you want to delete this user?');">
+                    <i class="icon-trash-2"></i>
+                </a>
             </div>
         </div>
     </li>
@@ -607,6 +608,7 @@ include 'views/admin/layout/header.php';?>
                     </div>
                     <!-- /main-content -->
                 </div>
+
 
 <?php
 include 'views/admin/layout/footer.php';

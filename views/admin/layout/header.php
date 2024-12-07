@@ -119,8 +119,8 @@
                                                 </a>
                                             </li>
                                             <li class="sub-menu-item">
-                                                <a href="?ctl=orderDetail" class="">
-                                                    <div class="text">Order detail</div>
+                                                <a href="?ctl=formAddOrder" class="">
+                                                    <div class="text">Add New Order</div>
                                                 </a>
                                             </li>
                                             
@@ -305,8 +305,8 @@
                             <div class="header-grid">
                                 <div class="header-item country">
                                     <select class="image-select no-text">
-                                        <option data-thumbnail="public/admin/assets/images/country/1.png">ENG</option>
-                                        <option data-thumbnail="public/admin/assets/images/country/9.png">VIE</option>
+                                        <option data-thumbnail="public/admin/assets/images/country/9.png">VIE</option><option data-thumbnail="public/admin/assets/images/country/1.png">ENG</option>
+                                        
                                     </select>
                                 </div>
                                 <div class="header-item button-dark-light">
@@ -582,7 +582,7 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="setting.html" class="user-item">
+                                                <a href="#" class="user-item">
                                                     <div class="icon">
                                                         <i class="icon-settings"></i>
                                                     </div>
