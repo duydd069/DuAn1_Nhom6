@@ -67,8 +67,8 @@
                             <select class="image-select center style-default type-currencies">
                                 <option data-thumbnail="public/client/assets/images/country/fr.svg">EUR <span>€ | France</span></option>
                                 <option data-thumbnail="public/client/assets/images/country/de.svg">EUR <span>€ | Germany</span></option>
-                                <option selected data-thumbnail="public/client/assets/images/country/us.svg">USD <span>$ | United States</span></option>
-                                <option data-thumbnail="public/client/assets/images/country/vn.svg">VND <span>₫ | Vietnam</span></option>
+                                <option data-thumbnail="public/client/assets/images/country/us.svg">USD <span>$ | United States</span></option>
+                                <option selected data-thumbnail="public/client/assets/images/country/vn.svg">VND <span>₫ | Vietnam</span></option>
                             </select>
                         </div>
                         <div class="tf-languages">
@@ -76,7 +76,7 @@
                                 <option>English</option>
                                 <option>العربية</option>
                                 <option>简体中文</option>
-                                <option>Việt Nam</option>
+                                <option selected>Việt Nam</option>
                             </select>
                         </div>
                         
