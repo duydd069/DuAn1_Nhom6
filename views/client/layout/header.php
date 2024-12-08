@@ -147,12 +147,12 @@
                     <div class="col-xl-3 col-md-4 col-3">
                         <ul class="nav-icon d-flex justify-content-end align-items-center gap-20">
 
-                        <div class="search">
-                            <form action="index.php?ctl=serach" method="post">
-                                <input type="search" name="tensp" id="" placeholder="hay tìm kiếm nào">
-                                <button><i class="icon icon-search"></i></button>
-                                </form>
-                        </div>
+                        
+                        <form method="POST" action="index.php?ctl=serach">  <!-- Make sure the action points to the correct controller method -->
+                            <input type="text" name="product_name" placeholder="Search for products..." required />
+                            <button type="submit">Search</button>
+                        </form>
+
 
 
                             <?php if(!isset($_SESSION['email'])): ?>

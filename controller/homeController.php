@@ -22,25 +22,29 @@
         }
 
 
-        public function serach()
+        public function search()
         {
-    
-            if(isset($_POST['product_name']) && !empty($_POST['product_name']))
-            {
-                $product_name = $_POST['product_name'];
-                $search = (new Product())->timkiem($product_name);
-            }else{
+            // Initialize the products variable
+            $products = [];
+        
+            // Check if the product_name exists and is not empty in the POST request
+            if (isset($_POST['product_name']) && !empty($_POST['product_name'])) {
+                $product_name = $_POST['product_name'];  // Get the search term
+                $products = (new Product())->timkiem($product_name);  // Call the timkiem method from the Product model
+            } else {
+                // Redirect if no product_name was provided
                 header('location: index.php?ctl=home');
-                die();
+                exit();  // Make sure we stop further script execution
             }
-    
+        
+            // Fetch categories
             $categories = (new Product())->categories();
-            
-    
-             view('client/home/serach',[
-                'search' => $search,
-                'categories'=> $categories,
-                
+        
+            // Pass the products and categories to the view
+            view('client/home/search', [
+                'products' => $products,
+                'categories' => $categories,
             ]);
         }
+        
     }

@@ -60,7 +60,7 @@
             'password'                  =>(new UserController)->forget_pass(), // dã xong
             'register'                  =>(new UserController)->Register(), // đã xong
             // 'edituser'                  => (new UserController)->editUser(),
-            'serach'                    =>(new HomeController)->serach(),
+            'serach'                    =>(new HomeController)->search(),
 
 
 

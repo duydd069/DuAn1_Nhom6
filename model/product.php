@@ -23,9 +23,12 @@ class Product {
 
             public function timkiem($product_name)
             {
-            $stmt = $this->conn->prepare("SELECT * FROM products WHERE product_name LIKE '%$product_name%' LIMIT 6");
-            $stmt->execute();
-            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+                $product_name = "%" . $product_name . "%";  // Add wildcards to search
+                $stmt = $this->conn->prepare("SELECT * FROM products WHERE product_name LIKE :product_name LIMIT 6");
+                $stmt->bindParam(':product_name', $product_name, PDO::PARAM_STR);
+                $stmt->execute();
+                return $stmt->fetchAll(PDO::FETCH_ASSOC);
             }
+            
 
 }
