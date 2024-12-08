@@ -7,27 +7,11 @@
 
         }
 
-        public function grid()
+
+        public function blog()
         {
-            return view("client/blog/blog-grid");
+            return view("client/blog/blog");
 
         }
 
-        public function list()
-        {
-            return view("client/blog/blog-list");
-
-        }
-
-        public function left()
-        {
-            return view("client/blog/blog-sidebar-left");
-
-        }
-
-        public function right()
-        {
-            return view("client/blog/blog-sidebar-right");
-
-        }
     };

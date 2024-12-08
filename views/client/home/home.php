@@ -1,6 +1,4 @@
-<?php 
-include 'views/client/layout/header.php';
-?>
+<?php include_once "views/client/layout/header.php" ?>
         <!-- Slider -->
         <div class="tf-slideshow slider-home-2 slider-effect-fade position-relative">
             <div dir="ltr" class="swiper tf-sw-slideshow" data-preview="1" data-tablet="1" data-mobile="1" data-centered="false" data-space="0" data-loop="true" data-auto-play="true" data-delay="2000" data-speed="1000">
@@ -149,64 +147,86 @@ include 'views/client/layout/header.php';
 
                     <div dir="ltr" class="swiper tf-sw-product-sell wrap-sw-over" data-preview="4" data-tablet="3" data-mobile="2" data-space-lg="30" data-space-md="15" data-pagination="2" data-pagination-md="3" data-pagination-lg="3">
 
-                    <div class="swiper-wrapper">
-        <?php foreach ($products as $product): ?>
-        <div class="swiper-slide" lazy="true">
-          <div class="card-product">
-            <div class="card-product-wrapper">
-              <a href="product_detail.php?id=<?= htmlspecialchars($product['id']) ?>" class="product-img">
-                <img class="" data-src="<?= htmlspecialchars($product['image']) ?>" src="<?= htmlspecialchars($product['image']) ?>" alt="<?= htmlspecialchars($product['product_name']) ?>">
-                <img class=" img-hover" data-src="<?= htmlspecialchars($product['image']) ?>" src="<?= htmlspecialchars($product['image']) ?>" alt="<?= htmlspecialchars($product['product_name']) ?>">
-              </a>
-              <div class="list-product-btn absolute-2">
-                <a href="#quick_add" data-bs-toggle="modal" class="box-icon bg_white quick-add tf-btn-loading">
-                  <span class="icon icon-bag"></span>
-                  <span class="tooltip">Quick Add</span>
-                </a>
-                <a href="javascript:void(0);" class="box-icon bg_white wishlist btn-icon-action">
-                  <span class="icon icon-heart"></span>
-                  <span class="tooltip">Add to Wishlist</span>
-                  <span class="icon icon-delete"></span>
-                </a>
-                <a href="#compare" data-bs-toggle="offcanvas" aria-controls="offcanvasLeft" class="box-icon bg_white compare btn-icon-action">
-                  <span class="icon icon-compare"></span>
-                  <span class="tooltip">Add to Compare</span>
-                  <span class="icon icon-check"></span>
-                </a>
-                <a href="#quick_view" data-bs-toggle="modal" class="box-icon bg_white quickview tf-btn-loading">
-                  <span class="icon icon-view"></span>
-                  <span class="tooltip">Quick View</span>
-                </a>
-              </div>
-            </div>
-            <div class="card-product-info">
-              <a href="product_detail.php?id=<?= htmlspecialchars($product['id']) ?>" class="title link">
-                <?= htmlspecialchars($product['product_name']) ?>
-              </a>
-              <span class="price">
-                <?php if (!empty($product['discount_price'])): ?>
-                  <del>$<?= htmlspecialchars($product['product_price']) ?></del>
-                  <strong>$<?= htmlspecialchars($product['discount_price']) ?></strong>
-                <?php else: ?>
-                  $<?= htmlspecialchars($product['product_price']) ?>
-                <?php endif; ?>
-              </span>
-              <?php if (!empty($product['colors'])): ?>
-              <ul class="list-color-product">
-                <?php foreach ($product['colors'] as $color): ?>
-                <li class="list-color-item color-swatch <?php if ($color['active']) echo 'active'; ?>">
-                  <span class="tooltip"><?= htmlspecialchars($color['name']) ?></span>
-                  <span class="swatch-value" style="background-color: <?= htmlspecialchars($color['code']) ?>;"></span>
-                  <img class="lazyload" data-src="images/products/<?= htmlspecialchars($color['image']) ?>" src="images/products/<?= htmlspecialchars($color['image']) ?>" alt="<?= htmlspecialchars($product['product_name']) ?>">
-                </li>
-                <?php endforeach; ?>
-              </ul>
-              <?php endif; ?>
-            </div>
-          </div>
-        </div>
-        <?php endforeach; ?>
-      </div>
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide" lazy="true">
+                                <?php foreach ($product as $a): ?>
+
+
+                                <div class="card-product style-2">
+
+
+                                    <div class="card-product-wrapper">
+
+                                        <a href="product-detail.html" class="product-img">
+                                            <img class="lazyload img-product" data-src="public/client/assets/images/products/orange-1.jpg" src="public/client/assets/images/products/orange-1.jpg" alt="image-product">
+                                            <img class="lazyload img-hover" data-src="public/client/assets/images/products/white-1.jpg" src="public/client/assets/images/products/white-1.jpg" alt="image-product">
+                                        </a>
+                                        <div class="list-product-btn column-left">
+                                            <a href="javascript:void(0);" class="box-icon wishlist bg_white btn-icon-action">
+                                                <span class="icon icon-heart"></span>
+                                                <span class="tooltip">Add to Wishlist</span>
+                                                <span class="icon icon-delete"></span>
+                                            </a>
+                                            <a href="#compare" data-bs-toggle="offcanvas" aria-controls="offcanvasLeft" class="box-icon bg_white compare btn-icon-action">
+                                                <span class="icon icon-compare"></span>
+                                                <span class="tooltip">Add to Compare</span>
+                                                <span class="icon icon-check"></span>
+                                            </a>
+                                        </div>
+                                        <div class="list-product-btn absolute-3">
+                                            <a href="#quick_add" data-bs-toggle="modal" class="box-icon quick-add style-2">
+                                                <span class="icon icon-bag"></span>
+                                                <span class="text">QUICK ADD</span>
+                                            </a>
+                                            <a href="#quick_view" data-bs-toggle="modal" class="box-icon quickview style-2">
+                                                <span class="icon icon-view"></span>
+                                                <span class="text">QUICK VIEW</span>
+                                            </a>
+                                        </div>
+                                        <div class="size-list style-2">
+                                            <span>S</span>
+                                            <span>M</span>
+                                            <span>L</span>
+                                            <span>XL</span>
+                                        </div>
+                                        <div class="on-sale-wrap text-end">
+                                            <div class="on-sale-item">-33%</div>
+                                        </div>
+                                        <div class="countdown-box">
+                                            <div class="js-countdown" data-timer="1007500" data-labels="d :,h :,m :,s"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-product-info">
+                                            <a href="product-detail.html" class="title link"><?=$a['product_name']?></a>
+                                            <span class="price"><?=$a['product_price']?></span>
+
+                                            <ul class="list-color-product">
+                                            <li class="list-color-item color-swatch active">
+                                                <span class="tooltip">Orange</span>
+                                                <span class="swatch-value bg_orange-3"></span>
+                                                <img class="lazyload" data-src="public/client/assets/images/products/orange-1.jpg" src="public/client/assets/images/products/orange-1.jpg" alt="image-product">
+                                            </li>
+                                            <li class="list-color-item color-swatch">
+                                                <span class="tooltip">Black</span>
+                                                <span class="swatch-value bg_dark"></span>
+                                                <img class="lazyload" data-src="public/client/assets/images/products/black-1.jpg" src="public/client/assets/images/products/black-1.jpg" alt="image-product">
+                                            </li>
+                                            <li class="list-color-item color-swatch">
+                                                <span class="tooltip">White</span>
+                                                <span class="swatch-value bg_white"></span>
+                                                <img class="lazyload" data-src="public/client/assets/images/products/white-1.jpg" src="public/client/assets/images/products/white-1.jpg" alt="image-product">
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <?php endforeach ;?>
+
+                            </div>
+
+                        </div>
 
                     </div>
 
