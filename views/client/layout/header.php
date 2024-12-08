@@ -108,8 +108,6 @@
                             <ul class="box-nav-ul d-flex align-items-center justify-content-center gap-30">
                                 <li class="menu-item">
                                     <a href="?ctl=home" class="item-link">Home</a>
-                                    <div class="sub-menu mega-menu">    
-                                    </div>
                                 </li>
 
                                 <li class="menu-item">
@@ -201,13 +199,44 @@
                     </div>
                     <div class="col-xl-3 col-md-4 col-3">
                         <ul class="nav-icon d-flex justify-content-end align-items-center gap-20">
-                            <li class="nav-search"><a href="#canvasSearch" data-bs-toggle="offcanvas" aria-controls="offcanvasLeft" class="nav-icon-item"><i class="icon icon-search"></i></a></li>
-                            <li class="nav-account"><a href="?ctl=login" data-bs-toggle="modal" class="nav-icon-item"><i class="icon icon-account"></i></a></li>
-                            <li class="nav-wishlist"><a href="wishlist.html" class="nav-icon-item"><i class="icon icon-heart"></i><span class="count-box">1</span></a></li>
-                            <li class="nav-cart"><a href="#shoppingCart" data-bs-toggle="modal" class="nav-icon-item"><i class="icon icon-bag"></i><span class="count-box">0</span></a></li>
+                            <li class="nav-search"><a href="#" data-bs-toggle="offcanvas" aria-controls="offcanvasLeft" class="nav-icon-item"><i class="icon icon-search"></i></a></li>
+
+                            <?php if(!isset($_SESSION['email'])): ?>
+
+                                <a href="index.php?ctl=login">dăng nhập</a> 
+
+                            <?php else: ?>
+                            
+                                <h6>xin chao<h6 style="color: red;"><?=$_SESSION['email']['name']?></h6></h6>
+
+                            <?php endif; ?>
+
+                            <?php if(isset($_SESSION['email'])):?>
+
+
+                                <div class="form-group">
+                                    <ul>
+
+                                        <?php if($_SESSION['email']['role_id'] == 2): ?>
+
+                                            <li class="nav-account"><a href="index.php?ctl=dashboard" data-bs-toggle="modal" class="nav-icon-item"><i class="icon icon-account"></i></a></li>
+
+                                        <?php elseif($_SESSION['email']['role_id'] <= 1):?>
+
+                                        <li><a href="index.php?ctl=logout">logout</a></li>
+
+                                        <?php endif; ?>
+                                    </ul>
+                                </div>
+                            <?php endif; ?>
+
+                            <li class="nav-wishlist"><a href="#" class="nav-icon-item"><i class="icon icon-heart"></i><span class="count-box">1</span></a></li>
+                            <li class="nav-cart"><a href="#" data-bs-toggle="modal" class="nav-icon-item"><i class="icon icon-bag"></i><span class="count-box">0</span></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </header>
         <!-- /Header -->
+
+        

@@ -36,7 +36,7 @@
                             <img class="lazyload" data-src="public/client/assets/images/slider/fashion-slideshow-06.jpg" src="public/client/assets/images/slider/fashion-slideshow-06.jpg" alt="fashion-slideshow-03">
                             <div class="box-content">
                                 <div class="container">
-                                    <h1 class="fade-item fade-item-1">Gentle<br>Summer style</h1>
+<h1 class="fade-item fade-item-1">Gentle<br>Summer style</h1>
                                     <p class="fade-item fade-item-2">Discover the hottest trends and must-have looks</p>
                                     <a href="shop-default.html" class="fade-item fade-item-3 tf-btn btn-fill animate-hover-btn btn-xl radius-3"><span>Shop collection</span><i class="icon icon-arrow-right"></i></a>
                                 </div>
@@ -87,7 +87,7 @@
                     <div class="item-3 collection-item large hover-img wow fadeInUp" data-wow-delay=".2s">
                         <div class="collection-inner">
                             <a href="shop-default.html" class="collection-image img-style rounded-0">
-                                <img class="lazyload" data-src="public/client/assets/images/collections/collection-23.jpg" src="public/client/assets/images/collections/collection-23.jpg" alt="collection-img">
+<img class="lazyload" data-src="public/client/assets/images/collections/collection-23.jpg" src="public/client/assets/images/collections/collection-23.jpg" alt="collection-img">
                             </a>
                             <div class="collection-content">
                                 <a href="shop-default.html" class="tf-btn collection-title hover-icon"><span>Accessories</span><i class="icon icon-arrow1-top-left"></i></a>
@@ -138,8 +138,7 @@
                 <div class="flat-title flex-row justify-content-between px-0">
                     <span class="title wow fadeInUp" data-wow-delay="0s">Best Seller</span>
                 </div>
-
-                <div class="hover-sw-nav hover-sw-2"style="width: 800px; height: 1600px">
+<div class="hover-sw-nav hover-sw-2"style="width: 800px; height: 1600px">
     <div dir="ltr" class="swiper tf-product-header">
       <div class="swiper-wrapper">
         <?php foreach ($products as $a): ?>
@@ -199,7 +198,7 @@
               </span>
               <?php if (!empty($a["colors"])): ?>
               <ul class="list-color-product">
-                <?php foreach ($a["colors"] as $color): ?>
+<?php foreach ($a["colors"] as $color): ?>
                 <li class="list-color-item color-swatch <?php if (
                     $color["active"]
                 ) {
@@ -258,7 +257,7 @@
                                 <div class="banner-gr-item text-center hover-img">
                                     <div class="img-style">
                                         <a href="shop-default.html">
-                                            <img class="lazyload" data-src="public/client/assets/images/shop/file/banner-gr-2.jpg" src="public/client/assets/images/shop/file/banner-gr-2.jpg" alt="banner-collection">
+<img class="lazyload" data-src="public/client/assets/images/shop/file/banner-gr-2.jpg" src="public/client/assets/images/shop/file/banner-gr-2.jpg" alt="banner-collection">
                                         </a>
                                     </div>
                                     <div class="content">
@@ -307,7 +306,7 @@
                                     </div>
                                 </div>
                                 <div class="store-img">
-                                    <img class="lazyload" data-src="public/client/assets/images/shop/store/ourstore1.png" src="public/client/assets/images/shop/store/ourstore1.png" alt="store-img">
+<img class="lazyload" data-src="public/client/assets/images/shop/store/ourstore1.png" src="public/client/assets/images/shop/store/ourstore1.png" alt="store-img">
                                 </div>
                             </div>
                         </div>
@@ -352,7 +351,7 @@
                         <img class="lazyload" data-src="public/client/assets/images/brand/brand-01.png" src="public/client/assets/images/brand/brand-01.png"  alt="image-brand">
                     </div>
                     <div class="brand-item-v2 hover-img-brand">
-                        <img class="lazyload" data-src="public/client/assets/images/brand/brand-02.png" src="public/client/assets/images/brand/brand-02.png"  alt="image-brand">
+<img class="lazyload" data-src="public/client/assets/images/brand/brand-02.png" src="public/client/assets/images/brand/brand-02.png"  alt="image-brand">
                     </div>
                     <div class="brand-item-v2 hover-img-brand">
                         <img class="lazyload" data-src="public/client/assets/images/brand/brand-03.png" src="public/client/assets/images/brand/brand-03.png"  alt="image-brand">
