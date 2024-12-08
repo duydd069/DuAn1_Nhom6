@@ -9,7 +9,7 @@ class Product {
     public function product()
     {
             // lấy 6 sp mới nhất theo trường id.
-            $stmt = $this->conn->prepare('SELECT * FROM products ORDER BY id LIMIT 6');
+            $stmt = $this->conn->prepare('SELECT * FROM products');
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_ASSOC); // lấy tất cả.
     }

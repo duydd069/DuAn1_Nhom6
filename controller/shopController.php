@@ -6,7 +6,11 @@
         public function shop()
         {
 
-            return view('client/shop/shop');
+            $products = (new Product())->product();
+
+
+            return view('client/shop/shop',['products' => $products]);
         }
 
+    
     }

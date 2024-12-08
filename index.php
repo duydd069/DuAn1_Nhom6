@@ -52,9 +52,9 @@
 
 
             'home'                      =>(new HomeController)->home(),
-            'detail'                      =>(new HomeController)->home(),
-            'shop'              =>(new ShopController)->shop(),
-            'blog'                 =>(new BlogController)->blog(),
+            'detail'                    =>(new HomeController)->home(),
+            'shop'                      =>(new ShopController)->shop(),
+            'blog'                      =>(new BlogController)->blog(),
             'login'                     =>(new UserController)->login(), // đã xong    
             'logout'                    =>(new UserController)->logout(), // dã xong
             'password'                  =>(new UserController)->forget_pass(), // dã xong
