@@ -1,4 +1,6 @@
 
+<?php include_once "views/client/layout/header.php"; ?>
+
         <!-- Slider -->
         <section class="tf-slideshow about-us-page position-relative">
             <div class="banner-wrapper">
@@ -279,4 +281,4 @@
             </div>
         </section>
         <!-- /Shop Gram -->
- 
+        <?php include_once "views/client/layout/footer.php"; ?>

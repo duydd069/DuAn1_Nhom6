@@ -72,6 +72,11 @@
             'my-account'                =>(new MyController)->account(),
 
 
+            'about-us' => (new CartController)->about(),
+            '404' => (new CartController)->un404(),
+
+
+
 
 
 

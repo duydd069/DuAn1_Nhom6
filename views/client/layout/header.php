@@ -118,59 +118,7 @@
                                     <div class="sub-menu submenu-default">
                                         <ul class="menu-list">
                                             <li>
-                                                <a href="about-us.html" class="menu-link-text link text_black-2">About us</a>
-                                            </li>
-                                            <li class="menu-item-2">
-                                                <a href="#" class="menu-link-text link text_black-2">Brands</a>
-                                                <div class="sub-menu submenu-default">
-                                                    <ul class="menu-list">
-                                                        <li>
-                                                            <a href="brands.html" class="menu-link-text link text_black-2 position-relative">Brands
-                                                                <div class="demo-label"><span class="demo-new">New</span></div> 
-                                                            </a>
-                                                        </li>
-                                                        <li><a href="brands-v2.html" class="menu-link-text link text_black-2">Brand V2</a></li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li class="menu-item-2">
-                                                <a href="#" class="menu-link-text link text_black-2">Contact</a>
-                                                <div class="sub-menu submenu-default">
-                                                    <ul class="menu-list">
-                                                        <li><a href="contact-1.html" class="menu-link-text link text_black-2">Contact 1</a></li>
-                                                        <li><a href="contact-2.html" class="menu-link-text link text_black-2">Contact 2</a></li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li class="menu-item-2">
-                                                <a href="#" class="menu-link-text link text_black-2">FAQ</a>
-                                                <div class="sub-menu submenu-default">
-                                                    <ul class="menu-list">
-                                                        <li><a href="faq-1.html" class="menu-link-text link text_black-2">FAQ 01</a></li>
-                                                        <li><a href="faq-2.html" class="menu-link-text link text_black-2">FAQ 02</a></li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li class="menu-item-2">
-                                                <a href="#" class="menu-link-text link text_black-2">Store</a>
-                                                <div class="sub-menu submenu-default">
-                                                    <ul class="menu-list">
-                                                        <li><a href="our-store.html" class="menu-link-text link text_black-2">Our store</a></li>
-                                                        <li><a href="store-locations.html" class="menu-link-text link text_black-2">Store locator</a></li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li><a href="timeline.html" class="menu-link-text link text_black-2 position-relative">Timeline <div class="demo-label"><span class="demo-new">New</span></div> </a></li>
-                                            <li><a href="view-cart.html" class="menu-link-text link text_black-2 position-relative">View cart</a></li>
-                                            <li><a href="checkout.html" class="menu-link-text link text_black-2 position-relative">Check out</a></li>
-                                            <li class="menu-item-2">
-                                                <a href="#" class="menu-link-text link text_black-2">Payment</a>
-                                                <div class="sub-menu submenu-default">
-                                                    <ul class="menu-list">
-                                                        <li><a href="payment-confirmation.html" class="menu-link-text link text_black-2">Payment Confirmation</a></li>
-                                                        <li><a href="payment-failure.html" class="menu-link-text link text_black-2">Payment Failure</a></li>
-                                                    </ul>
-                                                </div>
+                                                <a href="?ctl=about-us" class="menu-link-text link text_black-2">About us</a>
                                             </li>
                                             <li class="menu-item-2">
                                                 <a href="#" class="menu-link-text link text_black-2">My account</a>
@@ -185,8 +133,7 @@
                                                     </ul>
                                                 </div>
                                             </li>
-                                            <li><a href="invoice.html" class="menu-link-text link text_black-2 position-relative">Invoice</a></li>
-                                            <li><a href="404.html" class="menu-link-text link text_black-2 position-relative">404</a></li>
+                                            <li><a href="?ctl=404" class="menu-link-text link text_black-2 position-relative">404</a></li>
 
                                         </ul>
                                     </div>
@@ -240,4 +187,3 @@
         </header>
         <!-- /Header -->
 
-        

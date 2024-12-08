@@ -44,7 +44,7 @@
                                 <button type="submit" class="tf-btn w-100 radius-3 btn-fill animate-hover-btn justify-content-center">Register</button>
                             </div>
                             <div class="text-center">
-                                <a href="login.html" class="tf-btn btn-line">Already have an account? Log in here<i class="icon icon-arrow1-top-left"></i></a>
+                                <a href="?ctl=login" class="tf-btn btn-line">Already have an account? Log in here<i class="icon icon-arrow1-top-left"></i></a>
                             </div>
                         </form>
                     </div>

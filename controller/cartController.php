@@ -43,4 +43,15 @@ class CartController {
         $cartModel->removeFromCart($id);
         header("Location: /");
     }
+
+
+    public function about()
+    {
+        return view('client/cart/about-us');
+    }
+
+    public function un404()
+    {
+        return view('client/cart/404');
+    }
 }
