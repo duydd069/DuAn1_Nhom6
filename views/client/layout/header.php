@@ -219,7 +219,7 @@
 
                                         <?php if($_SESSION['email']['role_id'] == 2): ?>
 
-                                            <li class="nav-account"><a href="index.php?ctl=dashboard" data-bs-toggle="modal" class="nav-icon-item"><i class="icon icon-account"></i></a></li>
+                                            <li class="nav-account"><a href="http://localhost/DuAn1-Group6/index.php?ctl=dashboard" data-bs-toggle="modal" class="nav-icon-item"><i class="icon icon-account"></i></a></li>
 
                                         <?php elseif($_SESSION['email']['role_id'] <= 1):?>
 
