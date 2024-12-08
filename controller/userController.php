@@ -33,10 +33,58 @@
                     $erro['password'] = " mật khẩu không đúng.";
                 }
             }
-            return view(view: 'client/my/login',data: ['erro' => $erro]);
+            return view(view: 'client/my/login');
         }
   
-    
+        public function userDetail() {
+            if (isset($_GET['id'])) {
+                $id = (int)$_GET['id'];
+                $userDetail = new User(); 
+                $user = $userDetail->getDUserById($id); // Cần thêm phương thức getUserById() vào model
+                include 'views/client/my/userDetail.php';
+            }
+        }
+
+        public function formDEditUser() {
+            if (isset($_GET['id'])) {
+                $id = (int)$_GET['id'];
+                $userDetail = new User(); 
+                $user = $userDetail->getDUserById($id); 
+                include 'views/client/my/formEditUser.php';
+            } else {
+                // Xử lý trường hợp không có ID
+                echo "No user ID provided.";
+                exit;
+            }
+        }
+        
+        public function updateDUser() {
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                $id = (int)$_POST['id']; // Lấy ID người dùng từ form
+                
+                $data = [
+                    'name' => $_POST['name'],
+                    'user_image' => $_POST['user_image'],
+                    'birth' => $_POST['birth'],
+                    'email' => $_POST['email'],
+                    'phone' => $_POST['phone'],
+                    'address' => $_POST['address'],
+                    'status' => $_POST['status'],
+                    'password' => $_POST['password'] // Lấy mật khẩu từ form
+                ];
+        
+                $homeModel = new User();
+                if ($homeModel->updateDUserById($id, $data)) {
+                    header("Location: ?ctl=userDetail&id=$id");
+                    exit;
+                } else {
+                    echo "Error updating user information.";
+                }
+            } else {
+                echo "Invalid request method.";
+            }
+        }
+
         public function logout(): never
         {
                 unset($_SESSION['email']);

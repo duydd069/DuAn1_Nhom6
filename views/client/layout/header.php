@@ -154,8 +154,9 @@
 
                             <?php else: ?>
                             
-                                <h6>xin chao<h6 style="color: red;"><?=$_SESSION['email']['name']?></h6></h6>
-
+                                
+                                <a href="?ctl=userDetail&id=<?= htmlspecialchars($_SESSION['email']['id']) ?>">
+                                <h6 style="color: red;"><?=$_SESSION['email']['name']?></h6>
                             <?php endif; ?>
 
                             <?php if(isset($_SESSION['email'])):?>

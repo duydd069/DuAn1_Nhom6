@@ -66,6 +66,9 @@
 
             'C'        =>(new MyController)->address(),
             'my-account-edit'           =>(new MyController)->edit(),
+            'userDetail'                =>(new UserController)->userDetail(),
+            'formDEditUser'             =>(new UserController)->formDEditUser(),
+            'updateDUser'                =>(new UserController)->updateDUser(),
             'my-account-orders-details' => (new MyController)->details(),
             'my-account-orders'         => (new MyController)->orders(),
             'my-account-wishlist'       =>(new MyController)->wishlist(),

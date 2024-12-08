@@ -49,6 +49,45 @@ class User {
 
     }
 
+    public function getDUserById($id) {
+        $sql = "SELECT * FROM accounts WHERE id = :id";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function updateDUserById($id, $data) {
+        global $db; // Kết nối đến cơ sở dữ liệu
+    
+        // Chuẩn bị câu lệnh SQL, không cập nhật mật khẩu nếu không có dữ liệu
+        $sql = "UPDATE accounts SET 
+                    name = :name, 
+                    user_image = :user_image, 
+                    birth = :birth, 
+                    email = :email, 
+                    phone = :phone, 
+                    address = :address, 
+                    status = :status" . 
+                (isset($data['password']) && !empty($data['password']) ? ", password = :password" : "") . 
+                " WHERE id = :id";
+        
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindParam(':name', $data['name']);
+        $stmt->bindParam(':user_image', $data['user_image']);
+        $stmt->bindParam(':birth', $data['birth']);
+        $stmt->bindParam(':email', $data['email']);
+        $stmt->bindParam(':phone', $data['phone']);
+        $stmt->bindParam(':address', $data['address']);
+        $stmt->bindParam(':status', $data['status']);
+        $stmt->bindParam(':password', $data['password']);
+        $stmt->bindParam(':id', $id);
+    
+
+        
+        return $stmt->execute();
+    }
+
     // hiện tất cả thông ti n user 
     public function all()
     {
