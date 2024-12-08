@@ -95,7 +95,6 @@
         public function forget_pass()
         {
             $thongbao = '';
-        
             if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 $email = $_POST['email'] ?? '';
         
