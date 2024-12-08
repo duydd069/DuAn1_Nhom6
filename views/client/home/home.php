@@ -133,7 +133,7 @@
         <!-- Best seller -->
         <section class="flat-spacing-2 pt_0">
 
-            <div class="container">
+            <div class="container" style="width: 800px; height: 1600px">
 
                 <div class="flat-title flex-row justify-content-between px-0">
                     <span class="title wow fadeInUp" data-wow-delay="0s">Best Seller</span>

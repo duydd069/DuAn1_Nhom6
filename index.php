@@ -4,10 +4,9 @@
         require_once "./commons/function.php";
 
         require_once "./controller/userController.php";
-        require_once "./controller/blogController.php.php";
+        require_once "./controller/blogController.php";
         require_once "./controller/myController.php";
         require_once "./controller/homeController.php";
-        require_once "./controller/payController.php";
         require_once "./controller/cartController.php";
         require_once "./controller/adminController.php";
         require_once "./controller/shopController.php";
