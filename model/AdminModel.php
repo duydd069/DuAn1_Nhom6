@@ -53,6 +53,7 @@ class home{
         return $stmt->execute();
     }
 
+
     public function deleteCategoryById($id) {
         $stmt = $this->conn->prepare("DELETE FROM categories WHERE id = :id");
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);

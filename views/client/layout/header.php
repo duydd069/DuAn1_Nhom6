@@ -67,14 +67,14 @@
                             <select class="image-select center style-default type-currencies">
                                 <option data-thumbnail="public/client/assets/images/country/fr.svg">EUR <span>€ | France</span></option>
                                 <option data-thumbnail="public/client/assets/images/country/de.svg">EUR <span>€ | Germany</span></option>
-                                <option selected data-thumbnail="public/client/assets/images/country/us.svg">USD <span>$ | United States</span></option>
-                                <option data-thumbnail="public/client/assets/images/country/vn.svg">VND <span>₫ | Vietnam</span></option>
+                                <option data-thumbnail="public/client/assets/images/country/us.svg">USD <span>$ | United States</span></option>
+                                <option selected data-thumbnail="public/client/assets/images/country/vn.svg">VND <span>₫ | Vietnam</span></option>
                             </select>
                         </div>
                         <div class="tf-languages">
                             <select class="image-select center style-default type-languages">
+                                <option>Tiếng Việt</option>
                                 <option>English</option>
-                                <option>العربية</option>
                                 <option>简体中文</option>
                                 <option>اردو</option>
                             </select>
@@ -643,7 +643,7 @@
                                                 <a href="#" class="menu-link-text link text_black-2">My account</a>
                                                 <div class="sub-menu submenu-default">
                                                     <ul class="menu-list">
-                                                        <li><a href="my-account.html" class="menu-link-text link text_black-2">My account</a></li>
+                                                        <li><a href="?ctl=my-account" class="menu-link-text link text_black-2">My account</a></li>
                                                         <li><a href="my-account-orders.html" class="menu-link-text link text_black-2">My order</a></li>
                                                         <li><a href="my-account-orders-details.html" class="menu-link-text link text_black-2">My order details</a></li>
                                                         <li><a href="my-account-address.html" class="menu-link-text link text_black-2">My address</a></li>
@@ -670,7 +670,6 @@
                                         </ul>
                                     </div>
                                 </li>
-                                <li class="menu-item"><a href="https://themeforest.net/item/ecomus-ultimate-html5-template/53417990?s_rank=3" class="item-link">Buy now</a></li>
                             </ul>
                         </nav>
                     </div>

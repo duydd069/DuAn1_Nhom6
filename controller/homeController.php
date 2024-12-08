@@ -2,17 +2,25 @@
     class HomeController
     {
         public function home()
-        {
-            // session_start();
+{
+    // Start the session if it hasn't been started
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
 
-            // if (!isset($_SESSION['user'])) {
-            //     header('Location: index.php?ctl=login');  // Nếu không có người dùng trong session, chuyển hướng về trang login
-            //     die();
-            // }
+    // Check if the user is logged in
+    if (!isset($_SESSION['user'])) {
+        header('Location: index.php?ctl=login'); // Redirect to login if not authenticated
+        exit();
+    }
 
-            $product = (new home())->home();
-            return view('client/home/home',['product' => $product]);
-        }
+    // Fetch products from the model
+    $productModel = new ProductModel(); // Assuming you have a ProductModel class
+    $products = $productModel->getAllProducts(); // Fetch all products
+
+    // Return the view with products
+    return view('client/home/home', ['products' => $products]);
+}
 
         public function home2()
         {

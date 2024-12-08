@@ -13,6 +13,7 @@
 
         require_once './model/AdminModel.php';
         require_once './model/user.php';
+        require_once './model/ProductModel.php';
 
         $ctl = $_GET['ctl'] ?? "report";
         match($ctl)
@@ -20,6 +21,7 @@
             '',
             'home'                      =>(new HomeController)->home(),
             'form_login'                =>(new UserController)->form_login(),
+            'login'                     =>(new UserController)->login(),
             'dashboard'                 =>(new AdminController)->dashboard(),
             'formAddProduct'            =>(new AdminController)->formAddProduct(),
             'addProduct'                =>(new AdminController)->addProduct(),

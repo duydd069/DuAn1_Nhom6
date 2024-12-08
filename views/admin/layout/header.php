@@ -118,11 +118,6 @@
                                                     <div class="text">Order list</div>
                                                 </a>
                                             </li>
-                                            <li class="sub-menu-item">
-                                                <a href="?ctl=formAddOrder" class="">
-                                                    <div class="text">Add New Order</div>
-                                                </a>
-                                            </li>
                                             
                                         </ul>
                                     </li>

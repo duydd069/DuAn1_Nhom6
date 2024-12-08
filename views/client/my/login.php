@@ -40,7 +40,7 @@
                             <?php } ?>
 
                             <div>
-                                <form id="login-form" action="?ctl=form_login" method="post" accept-charset="utf-8">
+                                <form id="login-form" action="?ctl=login" method="post" accept-charset="utf-8">
                                     <div class="tf-field style-1 mb_15">
                                         <input class="tf-field-input tf-input" placeholder="Hãy nhập email vào đây" type="text" id="property3" name="email" required>
                                         <label class="tf-field-label fw-4 text_black-2" for="property3">Email *</label>
