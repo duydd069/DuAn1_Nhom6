@@ -151,8 +151,6 @@
 
                             <div class="swiper-slide" lazy="true">
                                 <?php foreach ($product as $a): ?>
-
-
                                 <div class="card-product style-2">
 
 
