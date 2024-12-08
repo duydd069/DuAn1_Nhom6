@@ -1,7 +1,5 @@
 <?php include_once "views/client/layout/header.php" ?>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         <div class="tf-page-title">
             <div class="container-full">
@@ -77,7 +75,7 @@
                         <!-- card product 1 -->
                         <?php foreach ($products as $a): ?>
                             <div class="card-product" ><div class="card-product-wrapper">
-        <a href="?ctl=product_detail&id=<?= htmlspecialchars($a['id']) ?>" class="product-img">
+        <a href="product_detail.php?id=<?= htmlspecialchars($a['id']) ?>" class="product-img">
             <img class="lazyload img-product" data-src="<?= htmlspecialchars($a['image']) ?>" src="<?= htmlspecialchars($a['image']) ?>" alt="<?= htmlspecialchars($a['product_name']) ?>">
             <img class="lazyload img-hover" data-src="<?= htmlspecialchars($a['image']) ?>" src="<?= htmlspecialchars($a['image']) ?>" alt="<?= htmlspecialchars($a['product_name']) ?>">
         </a>
@@ -125,55 +123,31 @@
             <?php endforeach; ?>
         </ul>
         <?php endif; ?>
-=======
-=======
->>>>>>> 5dab4341debeadb4e3e20cabd606d4dd20a04848
-<div class="tf-page-title">
-    <div class="container-full text-center">
-        <h1 class="heading">Sản Phẩm Chất Lượng </h1>
-        <p class="text-2 text_black-2 mt_5">Mua sắm qua bộ sưu tập thời trang mới nhất của chúng tôi</p>
-<<<<<<< HEAD
->>>>>>> 5dab4341debeadb4e3e20cabd606d4dd20a04848
-=======
->>>>>>> 5dab4341debeadb4e3e20cabd606d4dd20a04848
     </div>
 </div>
-<!-- /page-title -->
-
-<!-- Section Product -->
-<section class="flat-spacing-2">
-    <div class="container">
-        <div class="wrapper-control-shop">
-            <div class="grid-layout wrapper-shop" data-grid="grid-4">
-                <?php foreach ($data as $post) : ?>
-                <div class="card-product" data-price="16.95" data-color="orange black white">
-                    <div class="card-product-wrapper">
-                        <a href="?ctl=productDetaill&id=<?= $post['id']?>" class="product-img">
-                            <img src="<?= $post['image'] ?>" alt="<?= $post['product_name'] ?>">
-                        </a>
-                        <div class="list-product-btn absolute-2">
-                            <a href="#quick_add" data-bs-toggle="modal" class="box-icon bg_white quick-add tf-btn-loading">
-                                <span class="icon icon-bag"></span>
-                                <span class="tooltip">Quick Add</span>
-                            </a>
-                            <a href="javascript:void(0);" class="box-icon bg_white wishlist btn-icon-action">
-                                <span class="icon icon-heart"></span>
-                                <span class="tooltip">Add to Wishlist</span>
-                            </a>
-                            <a href="#compare" data-bs-toggle="offcanvas" aria-controls="offcanvasLeft" class="box-icon bg_white compare btn-icon-action">
-                                <span class="icon icon-compare"></span>
-                                <span class="tooltip">Add to Compare</span>
-                            </a>
-                            <a href="#quick_view" data-bs-toggle="modal" class="box-icon bg_white quickview tf-btn-loading">
-                                <span class="icon icon-view"></span>
-                                <span class="tooltip">Quick View</span>
-                            </a>
-                        </div>
+<?php endforeach; ?>
+                        
                     </div>
-                    <div class="card-product-info text-center">
-                        <a href="?ctl=productDetaill&id=<?= $post['id']?>" class="title link"><?= $post['product_name']?></a>
-                        <span class="price"><?= number_format($post['product_price'], 0, ',', '.') ?> VNĐ</span>
-                    </div>
+                    <!-- pagination -->
+                    <ul class="tf-pagination-wrap tf-pagination-list tf-pagination-btn">
+                        <li class="active">
+                            <a href="#" class="pagination-link">1</a>
+                        </li>
+                        <li>
+                            <a href="#" class="pagination-link animate-hover-btn">2</a>
+                        </li>
+                        <li>
+                            <a href="#" class="pagination-link animate-hover-btn">3</a>
+                        </li>
+                        <li>
+                            <a href="#" class="pagination-link animate-hover-btn">4</a>
+                        </li>
+                        <li>
+                            <a href="#" class="pagination-link animate-hover-btn">
+                                <span class="icon icon-arrow-right"></span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
                 <?php endforeach ?>
             </div>
