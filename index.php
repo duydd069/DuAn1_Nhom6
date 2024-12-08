@@ -4,7 +4,7 @@
         require_once "./commons/function.php";
 
         require_once "./controller/userController.php";
-        require_once "./controller/blogController.php";
+        require_once "./controller/blogController.php.php";
         require_once "./controller/myController.php";
         require_once "./controller/homeController.php";
         require_once "./controller/payController.php";
@@ -52,7 +52,7 @@
             'detail'                      =>(new HomeController)->home(),
             'shop'              =>(new ShopController)->shop(),
             'blog'                 =>(new BlogController)->blog(),
-            'login'                     =>(new UserController)->login(), // đã xong
+            'login'                     =>(new UserController)->login(), // đã xong    
             'logout'                    =>(new UserController)->logout(), // dã xong
             'password'                  =>(new UserController)->forget_pass(), // dã xong
             'register'                  =>(new UserController)->Register(), // đã xong
@@ -69,9 +69,6 @@
             'my-account'                =>(new MyController)->account(),
 
 
-            'payment-confirmation'                  =>(new PayController )->confirmation(),
-            'payment-failure'                       =>(new PayController )->failure(),
-            'privacy-policy'                        =>(new PayController )->policy(),
 
 
 
