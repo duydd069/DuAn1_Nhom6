@@ -146,7 +146,14 @@
                     </div>
                     <div class="col-xl-3 col-md-4 col-3">
                         <ul class="nav-icon d-flex justify-content-end align-items-center gap-20">
-                            <li class="nav-search"><a href="#" data-bs-toggle="offcanvas" aria-controls="offcanvasLeft" class="nav-icon-item"><i class="icon icon-search"></i></a></li>
+
+                        <div class="search">
+                            <form action="index.php?ctl=serach" method="post">
+                                <input type="search" name="tensp" id="" placeholder="hay tìm kiếm nào">
+                                <button><i class="icon icon-search"></i></button>
+                                </form>
+                        </div>
+
 
                             <?php if(!isset($_SESSION['email'])): ?>
 
@@ -178,7 +185,7 @@
                                 
                             <?php endif; ?>
 
-                            <li class="nav-wishlist"><a href="" class="nav-icon-item"><i class="icon icon-heart"></i><span class="count-box">1</span></a></li>
+                            <li class="nav-wishlist"><a href="#" class="nav-icon-item"><i class="icon icon-heart"></i><span class="count-box">1</span></a></li>
                             <li class="nav-cart"><a href="#" data-bs-toggle="modal" class="nav-icon-item"><i class="icon icon-bag"></i><span class="count-box">0</span></a></li>
                         </ul>
                     </div>

@@ -14,4 +14,18 @@ class Product {
             return $stmt->fetchAll(PDO::FETCH_ASSOC); // lấy tất cả.
     }
 
+            public function categories()
+            {
+                $stmt = $this->conn->prepare("SELECT * FROM categories ORDER BY id DESC");
+                $stmt->execute();
+                return $stmt->fetchAll(PDO::FETCH_ASSOC);  // hiện ra tất cả các dữ liệu trong danhmuc từ mã mới nhất.
+            }
+
+            public function timkiem($product_name)
+            {
+            $stmt = $this->conn->prepare("SELECT * FROM products WHERE product_name LIKE '%$product_name%' LIMIT 6");
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+            }
+
 }

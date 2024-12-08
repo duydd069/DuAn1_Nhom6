@@ -20,4 +20,27 @@
 
             return view('client/home/detail');
         }
+
+
+        public function serach()
+        {
+    
+            if(isset($_POST['product_name']) && !empty($_POST['product_name']))
+            {
+                $product_name = $_POST['product_name'];
+                $search = (new Product())->timkiem($product_name);
+            }else{
+                header('location: index.php?ctl=home');
+                die();
+            }
+    
+            $categories = (new Product())->categories();
+            
+    
+             view('client/home/serach',[
+                'search' => $search,
+                'categories'=> $categories,
+                
+            ]);
+        }
     }
