@@ -12,6 +12,8 @@
         require_once "./controller/adminController.php";
         require_once "./controller/shopController.php";
 
+        require_once "./model/product.php";
+
         require_once './model/AdminModel.php';
         require_once './model/user.php';
         require_once './model/cart.php';
@@ -19,6 +21,7 @@
         $ctl = $_GET['ctl'] ?? "home";
         match($ctl)
         {
+            
             '',
             'dashboard'                 =>(new AdminController)->dashboard(),
             'formAddProduct'            =>(new AdminController)->formAddProduct(),
@@ -32,6 +35,7 @@
             'cart'                     =>(new CartController)->index(),
             'formAddOrder'              =>(new AdminController)->formAddOrder(),
             'formEditOrder'             =>(new AdminController)->formEditOrder(),
+            // 'addOrder'                  =>(new AdminController)->addOrder(),
             'updateOrder'               =>(new AdminController)->updateOrder(),
             'deleteOrder'               =>(new AdminController)->deleteOrder(),
             'user'                      =>(new AdminController)->user(),
@@ -47,6 +51,7 @@
             'deleteCategory'            =>(new AdminController)->deleteCategory(),
             'report'                    =>(new AdminController)->report(),
 
+
             'home'                      =>(new HomeController)->home(),
             'detail'                      =>(new HomeController)->home(),
             'shop'              =>(new ShopController)->shop(),
@@ -55,6 +60,7 @@
             'logout'                    =>(new UserController)->logout(), // dã xong
             'password'                  =>(new UserController)->forget_pass(), // dã xong
             'register'                  =>(new UserController)->Register(), // đã xong
+            // 'edituser'                  => (new UserController)->editUser(),
 
 
 
@@ -62,7 +68,7 @@
             'my-account-address'        =>(new MyController)->address(),
             'my-account-edit'           =>(new MyController)->edit(),
             'my-account-orders-details' => (new MyController)->details(),
-            // 'my-account-orders'         => (new MyController)->orders(),
+            'my-account-orders'         => (new MyController)->orders(),
             'my-account-wishlist'       =>(new MyController)->wishlist(),
             'my-account'                =>(new MyController)->account(),
 
