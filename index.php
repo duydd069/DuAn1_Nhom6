@@ -19,6 +19,7 @@
         $ctl = $_GET['ctl'] ?? "home";
         match($ctl)
         {
+            
             '',
             'dashboard'                 =>(new AdminController)->dashboard(),
             'formAddProduct'            =>(new AdminController)->formAddProduct(),
