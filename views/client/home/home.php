@@ -145,7 +145,7 @@
         <div class="swiper-slide">
           <div class="card-product">
             <div class="card-product-wrapper">
-              <a href="product_detail.php?id=<?= htmlspecialchars(
+              <a href="?ctl=product_detail&id=<?= htmlspecialchars(
                   $a["id"]
               ) ?>" class="product-img">
                 <img class=" img-product" data-src="<?= htmlspecialchars(

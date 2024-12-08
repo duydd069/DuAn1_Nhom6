@@ -7,68 +7,63 @@
         require_once "./controller/blogController.php";
         require_once "./controller/myController.php";
         require_once "./controller/homeController.php";
-        require_once "./controller/cartController.php";
+        require_once "./controller/payController.php";
+        require_once "./controller/productController.php";
         require_once "./controller/adminController.php";
         require_once "./controller/shopController.php";
+        require_once "./controller/cartController.php";
 
-        require_once "./model/product.php";
+
 
         require_once './model/AdminModel.php';
         require_once './model/user.php';
+        require_once './model/Category.php';
+        require_once './model/Product.php';
+        require_once './model/comment.php';
         require_once './model/cart.php';
 
-        $ctl = $_GET['ctl'] ?? "home";
+        $ctl = $_GET['ctl'] ?? "";
         match($ctl)
         {
-            
             '',
+            'home'                      =>(new HomeController)->cate(), 
+            'form_login'                =>(new UserController)->form_login(),
             'dashboard'                 =>(new AdminController)->dashboard(),
             'formAddProduct'            =>(new AdminController)->formAddProduct(),
-            'addProduct'                =>(new AdminController)->addProduct(),
             'category'                  =>(new AdminController)->category(),
             'formAddCategory'           =>(new AdminController)->formAddCategory(),
-            'addCategory'               =>(new AdminController)->addCategory(),
-            'formEditCategory'          =>(new AdminController)->formEditCategory(),
-            'updateCategory'            =>(new AdminController)->updateCategory(),
             'order'                     =>(new AdminController)->order(),
-            'cart'                     =>(new CartController)->index(),
             'formAddOrder'              =>(new AdminController)->formAddOrder(),
-            'formEditOrder'             =>(new AdminController)->formEditOrder(),
-            // 'addOrder'                  =>(new AdminController)->addOrder(),
-            'updateOrder'               =>(new AdminController)->updateOrder(),
-            'deleteOrder'               =>(new AdminController)->deleteOrder(),
             'user'                      =>(new AdminController)->user(),
             'formAddUser'               =>(new AdminController)->formAddUser(),
-            'addUser'                   =>(new AdminController)->addUser(),
-            'formEditUser'              =>(new AdminController)->formEditUser(),
-            'updateUser'                =>(new AdminController)->updateUser(),
             'listProduct'               =>(new AdminController)->listProduct(),
-            'deleteUser'                =>(new AdminController)->deleteUser(),
-            'deleteProduct'             =>(new AdminController)->deleteProduct(),
-            'formEditProduct'           =>(new AdminController)->formEditProduct(),
-            'updateProduct'             =>(new AdminController)->updateProduct(),
-            'deleteCategory'            =>(new AdminController)->deleteCategory(),
-            'report'                    =>(new AdminController)->report(),
+            
+
+           'cart'                     =>(new CartController)->index(),
+            'update_cart' => (new CartController)->updateCart(),
+            'deleteFromCart' => (new CartController)->deleteFromCart(),
+    
+            'login'                     =>(new UserController)->login(),
 
 
-            'home'                      =>(new HomeController)->home(),
-            'detail'                    =>(new HomeController)->home(),
-            'shop'                      =>(new ShopController)->shop(),
-            'blog'                      =>(new BlogController)->blog(),
-            'login'                     =>(new UserController)->login(), // đã xong    
-            'logout'                    =>(new UserController)->logout(), // dã xong
-            'password'                  =>(new UserController)->forget_pass(), // dã xong
-            'register'                  =>(new UserController)->Register(), // đã xong
-            // 'edituser'                  => (new UserController)->editUser(),
-            'serach'                    =>(new HomeController)->search(),
+            'payment-confirmation'                  =>(new PayController )->confirmation(),
+            'payment-failure'                       =>(new PayController )->failure(),
+            'privacy-policy'                        =>(new PayController )->policy(),
 
 
+            'product'                               =>(new  ProductsController)->ListProduct(),
+            "productList"                           =>(new ProductsController)->show(),
+            "productDetaill"                           =>(new ProductsController)->DetailProduct(),
 
+            // 'category'                               =>(new  CategoryController)->cate(),
 
+<<<<<<< HEAD
+<<<<<<< HEAD
             'C'        =>(new MyController)->address(),
             'my-account-edit'           =>(new MyController)->edit(),
             'userDetail'                =>(new UserController)->userDetail(),
             'formDEditUser'             =>(new UserController)->formDEditUser(),
+            'product_detail'            =>(new ShopController)->productDetail(),
             'updateDUser'                =>(new UserController)->updateDUser(),
             'my-account-orders-details' => (new MyController)->details(),
             'my-account-orders'         => (new MyController)->orders(),
@@ -81,6 +76,16 @@
 
 
 
+=======
+            
+            // 'shop-collection-sub'     =>(new ShopController)->shopCollectionSub(),
+            // 'shop-women'     =>(new ShopController)->shop_women(),
+>>>>>>> 5dab4341debeadb4e3e20cabd606d4dd20a04848
+=======
+            
+            // 'shop-collection-sub'     =>(new ShopController)->shopCollectionSub(),
+            // 'shop-women'     =>(new ShopController)->shop_women(),
+>>>>>>> 5dab4341debeadb4e3e20cabd606d4dd20a04848
 
 
 
