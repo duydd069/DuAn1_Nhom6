@@ -50,8 +50,10 @@
             'detail'                      =>(new HomeController)->home(),
             'shop'              =>(new ShopController)->shop(),
             'blog'                 =>(new BlogController)->blog(),
-            'form_login'                =>(new UserController)->form_login(),
-            'login'                     =>(new UserController)->login(),
+            'login'                     =>(new UserController)->login(), // đã xong
+            'logout'                    =>(new UserController)->logout(), // dã xong
+            'password'                  =>(new UserController)->forget_pass(), // dã xong
+            'register'                  =>(new UserController)->Register(),
 
 
 
@@ -59,7 +61,7 @@
             'my-account-address'        =>(new MyController)->address(),
             'my-account-edit'           =>(new MyController)->edit(),
             'my-account-orders-details' => (new MyController)->details(),
-            'my-account-orders'         => (new MyController)->orders(),
+            // 'my-account-orders'         => (new MyController)->orders(),
             'my-account-wishlist'       =>(new MyController)->wishlist(),
             'my-account'                =>(new MyController)->account(),
 

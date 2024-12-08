@@ -38,3 +38,23 @@ function upload_file($file)
     }
     return "";
 }
+
+function deleteSessionErrors(){
+    if(isset($_SESSION['flash'])){
+        // Hủy session sau khi load trang
+        unset($_SESSION['flash']);
+        unset($_SESSION['errors']);
+        unset($_SESSION['thongBao']);
+        unset($_SESSION['old_data']);
+        unset($_SESSION['successMk']);
+        unset($_SESSION['successTt']);
+        unset($_SESSION['successAnh']);
+        unset($_SESSION['errorsKH']);
+        unset($_SESSION['tong']);
+        unset($_SESSION['layMk']);
+        unset( $_SESSION['dat_hang_thanh_cong']);
+
+     //   session_unset();
+      //  session_destroy();
+    }
+}

@@ -10,24 +10,32 @@
 
         public function login()
         {
-            $nguoidung = (new User())->user_login();
-            if($nguoidung)
+            if($_SERVER['REQUEST_METHOD'] == "POST")
             {
-                $_SESSION['user'] = $nguoidung;
-                $_SESSION['loi'] = "chúc mừng bạn đã đăng nhập thành công" .$nguoidung['name'];
-                header("location: index.php?ctl=list");
-                die();
-            }else{
-                $_SESSION['loi'] = "sai email hoặc mật khẩu vui lòng thử lại";
-                header("location: index.php?ctl=form_login");
-                die();
+                // var_dump($_POST);
+                $username = $_POST['email'];
+                $password = $_POST['password'];
+                $nguoidung= (new User)->user_login(user: $username);
+    
+                if($nguoidung)
+                {
+                    if($nguoidung['password'] == $password)
+                    {
+                        $_SESSION['email'] = $nguoidung;
+                        header("location: index.php?ctl=home");
+                        die();
+                    }else
+                    {
+                        $erro['email'] = "Tài khoản không tôn tại.";
+                    }
+                }else
+                {
+                    $erro['password'] = " mật khẩu không đúng.";
+                }
             }
+            return view(view: 'client/my/login',data: ['erro' => $erro]);
         }
-
-
-        
-        
-        
+  
     
         public function logout(): never
         {
@@ -35,4 +43,70 @@
                 header('location: index.php?ctl=login');
                 die();
         }
+
+        public function forget_pass()
+        {
+            $thongbao = '';
+        
+            if ($_SERVER['REQUEST_METHOD'] == "POST") {
+                $email = $_POST['email'] ?? '';
+        
+                // Kiểm tra email có được cung cấp hay không
+                if ($email) {
+                    $nguoidung = (new User())->passwhat($email);
+        
+                    if ($nguoidung) {
+                        $thongbao = "Mật khẩu của bạn là: " .   ($nguoidung['password']);
+                    } else {
+                        $thongbao = "Không tìm thấy email trong cơ sở dữ liệu.";
+                    }
+                } else {
+                    $thongbao = "Vui lòng nhập email.";
+                }
+            }
+        
+            // Chuyển thông báo đến view
+            return view(view: 'client/my/login', data: ['thongbao' => $thongbao]);
+        }
+
+
+        public function Register() {
+            $thongbao = "";  // Khởi tạo biến thông báo
+            if ($_SERVER['REQUEST_METHOD'] == "POST") {
+                // Thu thập dữ liệu từ form
+                $name = $_POST['name'];
+                $matkhau = $_POST['password'];
+                $email = $_POST['email'];
+                $phone = $_POST['phone'];
+        
+                // Mã hóa mật khẩu trước khi lưu vào cơ sở dữ liệu
+                $hashedPassword = password_hash($matkhau, PASSWORD_DEFAULT);
+        
+                try {
+                    // Gọi phương thức add từ User model để thêm người dùng vào cơ sở dữ liệu
+                    (new User())->add($name, $hashedPassword, $email, $phone);
+                    $thongbao = "Đăng ký thành công! Chào mừng bạn đến với hệ thống.";  // Thông báo thành công
+                } catch (Exception $e) {
+                    // Nếu có lỗi, ví dụ email đã tồn tại, hiển thị thông báo lỗi
+                    $thongbao = $e->getMessage();  // Thông báo lỗi (ví dụ: "Email đã được sử dụng.")
+                }
+            } else {
+                $thongbao = "Vui lòng nhập đầy đủ thông tin để đăng ký.";
+            }
+        
+            // Trả về view với thông báo
+            return view('client/my/register', ['thongbao' => $thongbao]);
+        }
+        
+        
+        
+        
+
+        public function add(): void
+        {   
+
+
+        }
+
+
     } 

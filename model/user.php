@@ -6,14 +6,11 @@ class User {
         $this->conn = connection(); 
     }
 
-
-    public function login(){
-            $email = $_POST['email'];
-            $password = $_POST['password'];
-            $sql = "SELECT * FROM accounts  WHERE `email`=? AND `password`=?";
-            $stmt = $this->conn->prepare($sql);
-            $stmt->execute([$email,$password]);
-            return $stmt->fetch();
+    public function user_login($user)
+    {
+        $stmt = $this->conn->prepare("SELECT * FROM accounts WHERE email=:email");
+        $stmt-> execute([':email' => $user]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
 }

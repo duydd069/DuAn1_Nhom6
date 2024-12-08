@@ -16,4 +16,16 @@ class ProductModel
         
         return $result->fetchAll(PDO::FETCH_ASSOC); // Return results as an associative array
     }
+
+    public function getAllcategories(){
+        try{
+            $sql = "SELECT * FROM danh_mucs";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute();
+            
+            return $stmt->fetchAll();
+        }catch(Exception $e){
+            echo "Lỗi: ".$e->getMessage();
+        }
+    }
 }

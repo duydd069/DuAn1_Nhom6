@@ -20,7 +20,7 @@
                                 <li><a href="my-account-address.html" class="my-account-nav-item">Address</a></li>
                                 <li><a href="my-account-edit.html" class="my-account-nav-item">Account Details</a></li>
                                 <li><span class="my-account-nav-item active">Wishlist</span></li>
-                                <li><a href="login.html" class="my-account-nav-item">Logout</a></li>
+                                <li><a href="?ctl=logout" class="my-account-nav-item">Logout</a></li>
                             </ul>
                         </div>
                     </div>
