@@ -1,4 +1,4 @@
- <?php 
+<?php 
     class UserController
     {
 
@@ -80,11 +80,11 @@
                 $phone = $_POST['phone'];
         
                 // Mã hóa mật khẩu trước khi lưu vào cơ sở dữ liệu
-                $hashedPassword = password_hash($matkhau, PASSWORD_DEFAULT);
+                // $hashedPassword = password_hash($matkhau, PASSWORD_DEFAULT);
         
                 try {
                     // Gọi phương thức add từ User model để thêm người dùng vào cơ sở dữ liệu
-                    (new User())->add($name, $hashedPassword, $email, $phone);
+                    (new User())->add($name, $matkhau, $email, $phone);
                     $thongbao = "Đăng ký thành công! Chào mừng bạn đến với hệ thống.";  // Thông báo thành công
                 } catch (Exception $e) {
                     // Nếu có lỗi, ví dụ email đã tồn tại, hiển thị thông báo lỗi

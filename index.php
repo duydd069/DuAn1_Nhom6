@@ -53,7 +53,7 @@
             'login'                     =>(new UserController)->login(), // đã xong
             'logout'                    =>(new UserController)->logout(), // dã xong
             'password'                  =>(new UserController)->forget_pass(), // dã xong
-            'register'                  =>(new UserController)->Register(),
+            'register'                  =>(new UserController)->Register(), // đã xong
 
 
 
