@@ -9,7 +9,7 @@
         </div>
         <!-- /page-title -->
         
-        <!-- Section Product -->
+        <!-- Section Prod   uct -->
         <section class="flat-spacing-2">
             <div class="container">
                 <div class="tf-shop-control grid-3 align-items-center">

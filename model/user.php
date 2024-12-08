@@ -49,7 +49,7 @@ class User {
 
     }
 
-    // hiện tất cả thông tin user 
+    // hiện tất cả thông ti n user 
     public function all()
     {
         $stmt = $this->conn->prepare("SELECT * FROM accounts ORDER BY id DESC");
