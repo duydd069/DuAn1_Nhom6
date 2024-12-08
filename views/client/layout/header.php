@@ -176,12 +176,12 @@
                                                 <a href="#" class="menu-link-text link text_black-2">My account</a>
                                                 <div class="sub-menu submenu-default">
                                                     <ul class="menu-list">
-                                                        <li><a href="my-account.html" class="menu-link-text link text_black-2">My account</a></li>
-                                                        <li><a href="my-account-orders.html" class="menu-link-text link text_black-2">My order</a></li>
-                                                        <li><a href="my-account-orders-details.html" class="menu-link-text link text_black-2">My order details</a></li>
-                                                        <li><a href="my-account-address.html" class="menu-link-text link text_black-2">My address</a></li>
-                                                        <li><a href="my-account-edit.html" class="menu-link-text link text_black-2">My account details</a></li>
-                                                        <li><a href="my-account-wishlist.html" class="menu-link-text link text_black-2">My wishlist</a></li>
+                                                        <li><a href="?ctl=my-account-address" class="menu-link-text link text_black-2">My account</a></li>
+                                                        <li><a href="?ctl=my-account-orders" class="menu-link-text link text_black-2">My order</a></li>
+                                                        <li><a href="?ctl=my-account-orders-details" class="menu-link-text link text_black-2">My order details</a></li>
+                                                        <li><a href="?ctl=my-account-edit" class="menu-link-text link text_black-2">My address</a></li>
+                                                        <li><a href="?ctl=my-account-edit" class="menu-link-text link text_black-2">My account details</a></li>
+                                                        <li><a href="?ctl=my-account-wishlist" class="menu-link-text link text_black-2">My wishlist</a></li>
                                                     </ul>
                                                 </div>
                                             </li>

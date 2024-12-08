@@ -64,7 +64,7 @@
 
 
 
-            'my-account-address'        =>(new MyController)->address(),
+            'C'        =>(new MyController)->address(),
             'my-account-edit'           =>(new MyController)->edit(),
             'my-account-orders-details' => (new MyController)->details(),
             'my-account-orders'         => (new MyController)->orders(),

@@ -39,7 +39,7 @@
     
         public function logout(): never
         {
-                unset($_SESSION['tentk']);
+                unset($_SESSION['email']);
                 header('location: index.php?ctl=login');
                 die();
         }
