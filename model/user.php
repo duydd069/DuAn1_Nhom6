@@ -46,10 +46,38 @@ class User {
             ':email' => $email,
             ':phone' => $phone
         ]);
+
+    }
+
+    // hiện tất cả thông tin user 
+    public function all()
+    {
+        $stmt = $this->conn->prepare("SELECT * FROM accounts ORDER BY id DESC");
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+    // lấy ra 1 sp theo ma id 
+    public function find_one($id)
+    {
+        $stmt = $this->conn->prepare("SELECT * FROM accounts WHERE id=$id");
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
     
-    
-    
+    public function update($data)
+{
+    $stmt = $this->conn->prepare("UPDATE accounts SET name =:name, user_image = :user_image,birth= :birth, email  = :email , phone = :phone,sex=:sex, address:=address WHERE matk = :matk");
+    $stmt->execute($data);
+}
+
+public function findByTentk($id)
+{
+    $stmt = $this->conn->prepare("SELECT * FROM accounts WHERE id = :id");
+    $stmt->bindParam(':id', $id);
+    $stmt->execute();
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+}
+
     
 
 }
