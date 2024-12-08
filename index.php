@@ -18,7 +18,6 @@
         match($ctl)
         {
             '',
-
             'dashboard'                 =>(new AdminController)->dashboard(),
             'formAddProduct'            =>(new AdminController)->formAddProduct(),
             'addProduct'                =>(new AdminController)->addProduct(),
