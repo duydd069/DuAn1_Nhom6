@@ -213,24 +213,25 @@
 
                             <?php if(isset($_SESSION['email'])):?>
 
-
                                 <div class="form-group">
                                     <ul>
 
-                                        <?php if($_SESSION['email']['role_id'] == 2): ?>
+                                        <?php if($_SESSION['email']['role_id'] == 1): ?>
 
-                                            <li class="nav-account"><a href="http://localhost/DuAn1-Group6/index.php?ctl=dashboard" data-bs-toggle="modal" class="nav-icon-item"><i class="icon icon-account"></i></a></li>
+                                            <li><a href="index.php?ctl=logout">logout</a></li>
 
-                                        <?php elseif($_SESSION['email']['role_id'] <= 1):?>
+                                        <?php elseif($_SESSION['email']['role_id'] == 2):?>
 
-                                        <li><a href="index.php?ctl=logout">logout</a></li>
+
+                                        <li class="nav-account"><a href="index.php?ctl=dashboard"><i class="icon icon-account"></i></a></li>
 
                                         <?php endif; ?>
                                     </ul>
                                 </div>
+                                
                             <?php endif; ?>
 
-                            <li class="nav-wishlist"><a href="#" class="nav-icon-item"><i class="icon icon-heart"></i><span class="count-box">1</span></a></li>
+                            <li class="nav-wishlist"><a href="" class="nav-icon-item"><i class="icon icon-heart"></i><span class="count-box">1</span></a></li>
                             <li class="nav-cart"><a href="#" data-bs-toggle="modal" class="nav-icon-item"><i class="icon icon-bag"></i><span class="count-box">0</span></a></li>
                         </ul>
                     </div>
