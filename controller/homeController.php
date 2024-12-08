@@ -17,5 +17,4 @@
         {
             return view('client/home/detail');
         }
-
     }

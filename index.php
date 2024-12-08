@@ -14,7 +14,7 @@
         require_once './model/AdminModel.php';
         require_once './model/user.php';
 
-        $ctl = $_GET['ctl'] ?? "report";
+        $ctl = $_GET['ctl'] ?? "home";
         match($ctl)
         {
             '',
