@@ -181,7 +181,7 @@
               </div>
             </div>
             <div class="card-product-info">
-              <a href="product_detail.php?id=<?= htmlspecialchars(
+              <a href="?ctl=product_detail&id=<?= htmlspecialchars(
                   $a["id"]
               ) ?>" class="title link">
                 <?= htmlspecialchars($a["product_name"]) ?>

@@ -75,7 +75,7 @@
                         <!-- card product 1 -->
                         <?php foreach ($products as $a): ?>
                             <div class="card-product" ><div class="card-product-wrapper">
-        <a href="product_detail.php?id=<?= htmlspecialchars($a['id']) ?>" class="product-img">
+        <a href="?ctl=product_detail&id=<?= htmlspecialchars($a['id']) ?>" class="product-img">
             <img class="lazyload img-product" data-src="<?= htmlspecialchars($a['image']) ?>" src="<?= htmlspecialchars($a['image']) ?>" alt="<?= htmlspecialchars($a['product_name']) ?>">
             <img class="lazyload img-hover" data-src="<?= htmlspecialchars($a['image']) ?>" src="<?= htmlspecialchars($a['image']) ?>" alt="<?= htmlspecialchars($a['product_name']) ?>">
         </a>
@@ -101,7 +101,7 @@
         </div>
     </div>
     <div class="card-product-info">
-        <a href="product_detail.php?id=<?= htmlspecialchars($a['id']) ?>" class="title link">
+        <a href="?ctl=product_detail&id=<?= htmlspecialchars($a['id']) ?>" class="title link">
             <?= htmlspecialchars($a['product_name']) ?>
         </a>
         <span class="price">
@@ -149,7 +149,7 @@
                         </li>
                     </ul>
                 </div>
-                <?php endforeach ?>
+
             </div>
             <!-- Pagination -->
             

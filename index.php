@@ -19,14 +19,14 @@
         require_once './model/user.php';
         require_once './model/Category.php';
         require_once './model/Product.php';
-        require_once './model/comment.php';
+
         require_once './model/cart.php';
 
         $ctl = $_GET['ctl'] ?? "";
         match($ctl)
         {
             '',
-            'home'                      =>(new HomeController)->cate(), 
+            'home'                      =>(new HomeController)->home(), 
             'form_login'                =>(new UserController)->form_login(),
             'dashboard'                 =>(new AdminController)->dashboard(),
             'formAddProduct'            =>(new AdminController)->formAddProduct(),
@@ -47,6 +47,7 @@
 
             'home'                      =>(new HomeController)->home(),
             'detail'                    =>(new HomeController)->home(),
+            'product_detail'            =>(new ProductsController)->productDetail(),
             'shop'                      =>(new ShopController)->shop(),
             'blog'                      =>(new BlogController)->blog(),
             'login'                     =>(new UserController)->login(), // đã xong    

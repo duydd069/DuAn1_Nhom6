@@ -25,6 +25,14 @@ class ProductsController
        $comments = (new Comment())->comnent($id);
        view('client/product/productDetaill', ['products' => $products, 'categories' => $categories, 'comments'=>$comments, 'limit'=>$limit, 'like'=>$like]);
    }
+   public function productDetail() {
+    if (isset($_GET['id'])) {
+        $id = (int)$_GET['id'];
+        $productDetail = new Product();
+        $product = $productDetail->getProductById($id);
+        include 'views/client/shop/product-detail.php';
+    }
+   }
 //    public function insert()
 //    {
    

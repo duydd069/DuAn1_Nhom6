@@ -1,0 +1,292 @@
+[33mcommit f4043be17392b125db9c4fe8f45245f635fa305f[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 8a3ce0d 5dab434
+Author: duydd069 <duyhiha3@gmail.com>
+Date:   Mon Dec 9 02:10:22 2024 +0700
+
+    Duy-productdetail
+
+[33mcommit 8a3ce0d19a91a24eeb00daa4ba1a55ba1e15d2ec[m
+Author: duydd069 <duyhiha3@gmail.com>
+Date:   Mon Dec 9 02:09:13 2024 +0700
+
+    Duy-ProductDetail
+
+[33mcommit 5dab4341debeadb4e3e20cabd606d4dd20a04848[m
+Author: Nguyễn Tiến Thịnh <thinhntph52573@gmail.com>
+Date:   Mon Dec 9 01:38:07 2024 +0700
+
+    Add files via upload
+
+[33mcommit fb7e7d97e643bbb7b57236def18023538aed5f67[m
+Author: Nguyễn Tiến Thịnh <thinhntph52573@gmail.com>
+Date:   Mon Dec 9 01:36:49 2024 +0700
+
+    pr
+
+[33mcommit 91ebb463ddd790aa1b0396744a9c783377bb53bf[m
+Author: Nguyễn Tiến Thịnh <thinhntph52573@gmail.com>
+Date:   Mon Dec 9 01:32:59 2024 +0700
+
+    product
+
+[33mcommit 67326dee430c14a92085b6a138e7d34de0157f9d[m
+Merge: 37e70b4 c49e8ac
+Author: thai0605 <thaitdph52583@gmail.com>
+Date:   Mon Dec 9 01:31:02 2024 +0700
+
+    Merge pull request #1 from duydd069/thai
+    
+    Thai
+
+[33mcommit 37e70b41290218f6a806f28b6f39f9d63dd0c709[m
+Author: Nguyễn Tiến Thịnh <thinhntph52573@gmail.com>
+Date:   Mon Dec 9 01:30:40 2024 +0700
+
+    sản phẩm và danh mục
+
+[33mcommit c49e8ac445ada57c42360312a5ecb0d2266d42cd[m[33m ([m[1;31morigin/thai[m[33m)[m
+Author: Nguyễn Tiến Thịnh <thinhntph52573@gmail.com>
+Date:   Mon Dec 9 01:28:49 2024 +0700
+
+    Add files via upload
+    
+    thịnh
+
+[33mcommit 0c6e7738feb7b4f5b5ff920f698f5577208bfdc2[m
+Author: Nguyễn Tiến Thịnh <thinhntph52573@gmail.com>
+Date:   Mon Dec 9 01:23:23 2024 +0700
+
+    Add files via upload
+
+[33mcommit 04cb77ff7bcb23205d3912dc4f310eaa4c294eef[m
+Merge: 8f7e2ee 08bb25f
+Author: duydd069 <duyhiha3@gmail.com>
+Date:   Mon Dec 9 00:32:27 2024 +0700
+
+    Merge branch 'master' of https://github.com/duydd069/DuAn1-Group6
+
+[33mcommit 8f7e2ee80c7a51f173a0fbec7d0be0e610c60162[m
+Author: duydd069 <duyhiha3@gmail.com>
+Date:   Mon Dec 9 00:31:20 2024 +0700
+
+    Duy-UserDetail
+
+[33mcommit 08bb25f1fcb0e55dec45f4fe9229077ba287dfb4[m
+Author: longsweet <longnkph52646@gmail.com>
+Date:   Sun Dec 8 23:28:16 2024 +0700
+
+    xong serach
+
+[33mcommit 9e9839433371d0035ceea660fb26bcec099fdfb0[m
+Author: longsweet <longnkph52646@gmail.com>
+Date:   Sun Dec 8 23:07:12 2024 +0700
+
+    serach
+
+[33mcommit 073f390b0ed3fc70c34646be84ef46c9d826d3bb[m
+Author: longsweet <longnkph52646@gmail.com>
+Date:   Sun Dec 8 22:33:00 2024 +0700
+
+    long dã buồn ngủ
+
+[33mcommit a29af155c762d90b1f61a47c29683b71e945c9aa[m
+Merge: 79ec31d 50f9bfb
+Author: longsweet <longnkph52646@gmail.com>
+Date:   Sun Dec 8 22:17:12 2024 +0700
+
+    Merge branch 'master' of https://github.com/duydd069/DuAn1-Group6
+
+[33mcommit 79ec31dcc4949362191f676b6527a2ced12b74c6[m
+Author: longsweet <longnkph52646@gmail.com>
+Date:   Sun Dec 8 22:17:07 2024 +0700
+
+    logout xong
+
+[33mcommit 50f9bfb8d38316f9df97bceb381c215d18bec2cb[m
+Author: duydd069 <duyhiha3@gmail.com>
+Date:   Sun Dec 8 22:15:45 2024 +0700
+
+    Duy-Restart lap
+
+[33mcommit 646a0f9c249fcbf13cb298e4aa9d4a77398e2f0d[m
+Author: longsweet <longnkph52646@gmail.com>
+Date:   Sun Dec 8 22:05:27 2024 +0700
+
+    xong use phần quyền
+
+[33mcommit b1bd51bd9340f05603d326586141dcc0affc5008[m
+Author: longsweet <longnkph52646@gmail.com>
+Date:   Sun Dec 8 21:51:20 2024 +0700
+
+    123
+
+[33mcommit 9fd18ffcfa7f7e3c34d94a2229cd5d08614914fc[m
+Merge: f236a3c b69a1ad
+Author: longsweet <longnkph52646@gmail.com>
+Date:   Sun Dec 8 21:48:02 2024 +0700
+
+    Merge branch 'master' of https://github.com/duydd069/DuAn1-Group6
+
+[33mcommit f236a3c968e5e5b348fd332a41aff9644a213eca[m
+Author: longsweet <longnkph52646@gmail.com>
+Date:   Sun Dec 8 21:47:33 2024 +0700
+
+    phan quan use
+
+[33mcommit b69a1ad22e6db74c2046461cf4bf7e34dcddbae5[m
+Author: duydd069 <duyhiha3@gmail.com>
+Date:   Sun Dec 8 21:25:17 2024 +0700
+
+    Duy-Hiển thị sản phẩm
+
+[33mcommit a059f633a57351f9dc4224bda930b4a8c824d357[m
+Author: duydd069 <duyhiha3@gmail.com>
+Date:   Sun Dec 8 20:23:19 2024 +0700
+
+    Duy- Hiển thị product home
+
+[33mcommit da24ea7badb02a4686e87e72706a22324ec292a3[m
+Merge: a736746 68ec43a
+Author: duydd069 <duyhiha3@gmail.com>
+Date:   Sun Dec 8 20:17:59 2024 +0700
+
+    Merge branch 'master' of https://github.com/duydd069/DuAn1-Group6
+
+[33mcommit a736746e76a97b8faba0a38563f33d7416c339d9[m
+Author: duydd069 <duyhiha3@gmail.com>
+Date:   Sun Dec 8 20:17:52 2024 +0700
+
+    Duy- Hiển thị sp
+
+[33mcommit 68ec43a3bba8a277f6c2abfa5efbbf3617c1ec49[m
+Merge: 51a1a4b e3e9fcb
+Author: longsweet <longnkph52646@gmail.com>
+Date:   Sun Dec 8 19:43:18 2024 +0700
+
+    Merge branch 'master' of https://github.com/duydd069/DuAn1-Group6
+
+[33mcommit 51a1a4b299730e8e2bc9ee0167773f8b45de2aed[m
+Author: longsweet <longnkph52646@gmail.com>
+Date:   Sun Dec 8 19:43:08 2024 +0700
+
+    i
+
+[33mcommit e3e9fcb326782cc63146691803a8eb1f5bde80cc[m
+Merge: 7ec9c4d 4e182da
+Author: thainv <thaitdph52583@gmail.com>
+Date:   Sun Dec 8 19:36:29 2024 +0700
+
+    Merge branch 'master' of https://github.com/duydd069/DuAn1-Group6
+
+[33mcommit 7ec9c4d02d6f84f49482a40fc8615d8ec425ecc6[m
+Author: thainv <thaitdph52583@gmail.com>
+Date:   Sun Dec 8 19:31:51 2024 +0700
+
+    giỏ hàng
+
+[33mcommit eb6d5106d604c52d2b4afb308b4216a27370bdb1[m
+Author: thainv <thaitdph52583@gmail.com>
+Date:   Sun Dec 8 19:14:16 2024 +0700
+
+    Giỏ hàng
+
+[33mcommit 4e182dae513e4178cc0a8bc67318df20d90aa4e5[m
+Author: duydd069 <duyhiha3@gmail.com>
+Date:   Sun Dec 8 19:08:02 2024 +0700
+
+    Duy
+
+[33mcommit 582085b4cda8099c8174fbe877e518a8d7e70545[m
+Merge: a3648a9 477ac8f
+Author: longsweet <longnkph52646@gmail.com>
+Date:   Sun Dec 8 19:03:20 2024 +0700
+
+    Merge branch 'master' of https://github.com/duydd069/DuAn1-Group6
+
+[33mcommit a3648a9acdc22650e2a0a5abfd77014992e0d208[m
+Author: longsweet <longnkph52646@gmail.com>
+Date:   Sun Dec 8 19:00:39 2024 +0700
+
+    l
+
+[33mcommit d32f7b927e3c62153cde75115cc170483b64c09a[m
+Merge: 4adf39f 5b24d87
+Author: longsweet <longnkph52646@gmail.com>
+Date:   Sun Dec 8 18:59:42 2024 +0700
+
+    Merge branch 'master' of https://github.com/duydd069/DuAn1-Group6
+
+[33mcommit 477ac8f88c2d64ac363aaa587f1c5df4bbac1339[m
+Author: duydd069 <duyhiha3@gmail.com>
+Date:   Sun Dec 8 18:57:04 2024 +0700
+
+    Duy-123
+
+[33mcommit 4adf39fcad66b5c5e03c206b08e86cc9264a3ffd[m
+Author: longsweet <longnkph52646@gmail.com>
+Date:   Sun Dec 8 18:54:21 2024 +0700
+
+    Long-user
+
+[33mcommit 5b24d87a5f79ff2ed3edb3344ddc8a27b9c9ac26[m
+Author: duydd069 <duyhiha3@gmail.com>
+Date:   Sun Dec 8 17:33:39 2024 +0700
+
+    Duy
+
+[33mcommit 73f05be79544a03e30098005a883269e7161e3e2[m
+Author: longsweet <longnkph52646@gmail.com>
+Date:   Sun Dec 8 16:24:12 2024 +0700
+
+    long
+
+[33mcommit 0b64eebd011a1e271ac950bd574f48d05f29ea2e[m
+Merge: 741074f 4c4f231
+Author: longsweet <longnkph52646@gmail.com>
+Date:   Sun Dec 8 16:22:14 2024 +0700
+
+    Merge branch 'master' of https://github.com/duydd069/DuAn1-Group6
+
+[33mcommit 741074f35fecac3a430b72143dd6a14f09ff81aa[m
+Author: longsweet <longnkph52646@gmail.com>
+Date:   Sun Dec 8 16:21:57 2024 +0700
+
+    long
+
+[33mcommit 468eaa3b96ee67c2109a43dbd04544226aa04207[m
+Author: longsweet <longnkph52646@gmail.com>
+Date:   Sun Dec 8 16:21:31 2024 +0700
+
+    longuser
+
+[33mcommit 4c4f231ed3d0550142b2e6be197b6577d763912d[m
+Author: duydd069 <duyhiha3@gmail.com>
+Date:   Sun Dec 8 16:17:23 2024 +0700
+
+    Duy
+
+[33mcommit 8a01788359ef369fb52d437207cd88448d2d05f4[m
+Author: longsweet <longnkph52646@gmail.com>
+Date:   Sun Dec 8 11:44:04 2024 +0700
+
+    long client
+
+[33mcommit d4259b983250682b99f37ad3698e6ebdbe784cf6[m
+Author: duydd069 <duyhiha3@gmail.com>
+Date:   Sun Dec 8 11:38:16 2024 +0700
+
+    Duy
+
+[33mcommit 9ad69c6326b333cc9eaa4c6eb88119e6fb6dae28[m
+Author: duydd069 <duyhiha3@gmail.com>
+Date:   Sat Dec 7 18:20:19 2024 +0700
+
+    Duy- Dashboard
+
+[33mcommit 2b0a90f3e07866989c048e25e423212610614651[m
+Author: duydd069 <duyhiha3@gmail.com>
+Date:   Tue Dec 3 23:40:16 2024 +0700
+
+    Duy-Admin Hoàn thiện Product Category
+
+[33m

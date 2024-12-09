@@ -1,18 +1,31 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 <?php
 class Product{
     public $con= null;
     public function __construct()
     {
-        $this->con=connection(); 
+        $this->conn=connection(); 
     }
     public function all(){
         $sql="SELECT * FROM products ORDER BY id DESC";
         $stmt = $this->con->prepare($sql);
         $stmt->execute();
-        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        return $result;
+        $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $products;
+    }
+    public function product()
+    {
+            // lấy 6 sp mới nhất theo trường id.
+            $stmt = $this->conn->prepare('SELECT * FROM products');
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC); // lấy tất cả.
+    }
+    public function getProductById($id){
+        $sql="SELECT * FROM products WHERE id=$id";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+        $product = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $product;
     }
     public function insert($data){
    
@@ -58,6 +71,4 @@ class Product{
                 $stmt->execute();
                 return $stmt->fetchAll(PDO::FETCH_ASSOC);
             }
-            
-
-}
+        }

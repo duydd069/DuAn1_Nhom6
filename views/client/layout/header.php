@@ -3,7 +3,6 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
 
-
 <!-- Mirrored from themesflat.co/html/ecomus/home-02.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 26 Nov 2024 12:09:40 GMT -->
 <head>
     <meta charset="utf-8">
@@ -157,7 +156,7 @@
 
                             <?php if(!isset($_SESSION['email'])): ?>
 
-                                <a href="index.php?ctl=login">dăng nhập</a> 
+                                <a href="index.php?ctl=login">Đăng nhập</a> 
 
                             <?php else: ?>
                             
@@ -171,9 +170,9 @@
                                 <div class="form-group">
                                     <ul>
 
-                                        <?php if($_SESSION['email']['role_id'] == 1): ?>
+                                        <?php if($_SESSION['email']['role_id'] == 1):?>
 
-                                            <li><a href="index.php?ctl=logout">logout</a></li>
+                                            <li><a href="index.php?ctl=logout">Đăng xuất</a></li>
 
                                         <?php elseif($_SESSION['email']['role_id'] == 2):?>
 

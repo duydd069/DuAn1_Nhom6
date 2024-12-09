@@ -88,7 +88,7 @@
         public function logout(): never
         {
                 unset($_SESSION['email']);
-                header('location: index.php?ctl=login');
+                header('location: index.php?ctl=home');
                 die();
         }
 
